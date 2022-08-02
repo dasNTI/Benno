@@ -70,7 +70,7 @@ public class Speech : MonoBehaviour
         MonologueOptions.GetComponent<RectTransform>().offsetMin = new Vector2(30, 20) * mmargin * Screen.height;
         MonologueOptions.GetComponent<RectTransform>().offsetMax = new Vector2(-30, -120) * mmargin * Screen.height;
 
-        /*StartMonologue(new Line[] { 
+        StartMonologue(new Line[] { 
             new Line("Klappt's?", 1, 1) 
         }, new Option[] {
             new Option("Klappt.", () => {
@@ -89,7 +89,7 @@ public class Speech : MonoBehaviour
                     })
                 });
             })
-        });*/
+        });
     }
 
     public void StartMonologue(Line[] Lines, Option[] Options = null, bool free = false)
