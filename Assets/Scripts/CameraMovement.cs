@@ -9,6 +9,11 @@ public class CameraMovement : MonoBehaviour
     public float distance = 10;
     public bool follow = true;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     void Update()
     {
         if (!follow) return;
