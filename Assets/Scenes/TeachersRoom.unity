@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7e1b2adda7a4b4aba65990a15b08c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 0.15
+  walkingSpeed: 0.02
   free: 1
   lm:
     serializedVersion: 2

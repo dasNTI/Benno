@@ -13,18 +13,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2022-08-02T12:56:21.663+02:00
-  initializedAtString: 2022-08-02T12:56:21.663+02:00
+  lastUpdatedAtString: 2022-08-02T13:39:54.002+02:00
+  initializedAtString: 2022-08-02T13:34:14.235+02:00
   entries:
-  - path: .vs\Benno\v16\.suo
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\.vs\Benno\v16\.suo
-    projectPath: .vs\Benno\v16\.suo
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assembly-CSharp-Editor-firstpass.csproj
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assembly-CSharp-Editor-firstpass.csproj
-    projectPath: Assembly-CSharp-Editor-firstpass.csproj
+  - path: Assets\Scenes\TeachersRoom.unity
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Scenes\TeachersRoom.unity
+    projectPath: Assets\Scenes\TeachersRoom.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -34,51 +28,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\Artifacts\1f\1fe54318fe85aeab159f1a8b425c1aa5
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\1f\1fe54318fe85aeab159f1a8b425c1aa5
-    projectPath: Library\Artifacts\1f\1fe54318fe85aeab159f1a8b425c1aa5
+  - path: Library\Artifacts\14\14808de5c135bec7ea09b50004ec74eb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\14\14808de5c135bec7ea09b50004ec74eb
+    projectPath: Library\Artifacts\14\14808de5c135bec7ea09b50004ec74eb
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: Library\Artifacts\bd\bd3b3e5efd1936c5316dab4dc453bbb0
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\bd\bd3b3e5efd1936c5316dab4dc453bbb0
-    projectPath: Library\Artifacts\bd\bd3b3e5efd1936c5316dab4dc453bbb0
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Library\Bee\1900b0aE.dag
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag
-    projectPath: Library\Bee\1900b0aE.dag
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library\Bee\1900b0aE.dag_fsmtime
     fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag_fsmtime
     projectPath: Library\Bee\1900b0aE.dag_fsmtime
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\Bee\1900b0aE-inputdata.json
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE-inputdata.json
-    projectPath: Library\Bee\1900b0aE-inputdata.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.dll
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.dll
-    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.pdb
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.pdb
-    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.ref.dll
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.ref.dll
-    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.ref.dll
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -100,12 +58,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\Bee\TundraBuildState.state
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\TundraBuildState.state
-    projectPath: Library\Bee\TundraBuildState.state
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library\Bee\TundraBuildState.state.map
     fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\TundraBuildState.state.map
     projectPath: Library\Bee\TundraBuildState.state.map
@@ -118,21 +70,33 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
+  - path: Library\gfu\cache\gitlocks.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gitlocks.yaml
+    projectPath: Library\gfu\cache\gitlocks.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\gfu\cache\gitstatusentries.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\gfu\cache\repoinfo.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\SceneVisibilityState.asset
     fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\SceneVisibilityState.asset
     projectPath: Library\SceneVisibilityState.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\ScriptAssemblies\Assembly-CSharp.dll
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ScriptAssemblies\Assembly-CSharp.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\ScriptAssemblies\Assembly-CSharp.pdb
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ScriptAssemblies\Assembly-CSharp.pdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -142,27 +106,33 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Library\ShaderCache\EditorEncounteredVariants
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ShaderCache\EditorEncounteredVariants
+    projectPath: Library\ShaderCache\EditorEncounteredVariants
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\SourceAssetDB
     fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Logs\AssetImportWorker0.log
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\AssetImportWorker0.log
-    projectPath: Logs\AssetImportWorker0.log
+  - path: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    projectPath: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 5
+    workTreeStatus: 3
+  - path: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    projectPath: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Logs\AssetImportWorker0-prev.log
     fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\AssetImportWorker0-prev.log
     projectPath: Logs\AssetImportWorker0-prev.log
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Logs\shadercompiler-AssetImportWorker0.log
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-AssetImportWorker0.log
-    projectPath: Logs\shadercompiler-AssetImportWorker0.log
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -172,12 +142,42 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    projectPath: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe1.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe1.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe1.log
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe2.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe2.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe2.log
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe3.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe3.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe3.log
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe4.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe4.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe4.log
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe5.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe5.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe5.log
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\__Backupscenes\0.backup
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Temp\__Backupscenes\0.backup
+    projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Temp\UnityLockfile
     fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
