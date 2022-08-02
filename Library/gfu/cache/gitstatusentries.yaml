@@ -1,0 +1,1260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 6
+  lastUpdatedAtString: 2022-08-02T12:44:00.393+02:00
+  initializedAtString: 2022-08-02T12:42:07.866+02:00
+  entries:
+  - path: Assembly-CSharp-Editor-firstpass.csproj
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assembly-CSharp-Editor-firstpass.csproj
+    projectPath: Assembly-CSharp-Editor-firstpass.csproj
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub.meta
+    projectPath: Assets\Plugins\GitHub.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor.meta
+    projectPath: Assets\Plugins\GitHub\Editor.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+    projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\big-logo@2x.png
+    projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+    projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\credits.txt
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\credits.txt
+    projectPath: Assets\Plugins\GitHub\Editor\credits.txt
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\credits.txt.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\credits.txt.meta
+    projectPath: Assets\Plugins\GitHub\Editor\credits.txt.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\eula.txt
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\eula.txt
+    projectPath: Assets\Plugins\GitHub\Editor\eula.txt
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\eula.txt.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\eula.txt.meta
+    projectPath: Assets\Plugins\GitHub\Editor\eula.txt.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+    projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+    projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.pdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.pdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Api.pdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.pdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.pdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.pdb.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.pdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.pdb.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\libsfw.bundle
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\libsfw.bundle
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\libsfw.so
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\libsfw.so
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.so
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\libsfw.so.meta
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+    projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+    projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+    projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+    projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\sfw.net.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\sfw.net.dll
+    projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\System.Threading.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\System.Threading.dll
+    projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+    projectPath: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+    projectPath: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x64.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x64.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x64.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x86.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x86.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x86.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets\Scripts\Speech.cs
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Assets\Scripts\Speech.cs
+    projectPath: Assets\Scripts\Speech.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Benno.sln
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Benno.sln
+    projectPath: Benno.sln
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\APIUpdater\project-dependencies.graph
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\APIUpdater\project-dependencies.graph
+    projectPath: Library\APIUpdater\project-dependencies.graph
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ArtifactDB
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ArtifactDB
+    projectPath: Library\ArtifactDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Artifacts\03\031e93fc0904d1bf6e77e3af3af1e78d
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\03\031e93fc0904d1bf6e77e3af3af1e78d
+    projectPath: Library\Artifacts\03\031e93fc0904d1bf6e77e3af3af1e78d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\07\07a653c522a72cc1b0f696d0b7576cc3
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\07\07a653c522a72cc1b0f696d0b7576cc3
+    projectPath: Library\Artifacts\07\07a653c522a72cc1b0f696d0b7576cc3
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\14\14808de5c135bec7ea09b50004ec74eb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\14\14808de5c135bec7ea09b50004ec74eb
+    projectPath: Library\Artifacts\14\14808de5c135bec7ea09b50004ec74eb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\1f\1fe54318fe85aeab159f1a8b425c1aa5
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\1f\1fe54318fe85aeab159f1a8b425c1aa5
+    projectPath: Library\Artifacts\1f\1fe54318fe85aeab159f1a8b425c1aa5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\3f\3fde39a0ac32981cd308c39f571c105a
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\3f\3fde39a0ac32981cd308c39f571c105a
+    projectPath: Library\Artifacts\3f\3fde39a0ac32981cd308c39f571c105a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\60\60c5372f90cfb757cd63417347b21c54
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\60\60c5372f90cfb757cd63417347b21c54
+    projectPath: Library\Artifacts\60\60c5372f90cfb757cd63417347b21c54
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\66\66c8bcda36225ba091464c8df68c12f5
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\66\66c8bcda36225ba091464c8df68c12f5
+    projectPath: Library\Artifacts\66\66c8bcda36225ba091464c8df68c12f5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\76\76b09290903b8c7da246ad69ed336ad2
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\76\76b09290903b8c7da246ad69ed336ad2
+    projectPath: Library\Artifacts\76\76b09290903b8c7da246ad69ed336ad2
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\81\811b9d40864c13f57f0b0ea9c714d5dc
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\81\811b9d40864c13f57f0b0ea9c714d5dc
+    projectPath: Library\Artifacts\81\811b9d40864c13f57f0b0ea9c714d5dc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\82\82108f944ceb23fd0c375157bae96a18
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\82\82108f944ceb23fd0c375157bae96a18
+    projectPath: Library\Artifacts\82\82108f944ceb23fd0c375157bae96a18
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\8c\8c13f6844f9061ca584afae262000a65
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\8c\8c13f6844f9061ca584afae262000a65
+    projectPath: Library\Artifacts\8c\8c13f6844f9061ca584afae262000a65
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\9a\9af957f233545a7c5e42c8eace3a5136
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\9a\9af957f233545a7c5e42c8eace3a5136
+    projectPath: Library\Artifacts\9a\9af957f233545a7c5e42c8eace3a5136
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\b3\b36be1ad0c7f44fe331a68b9375e0381
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\b3\b36be1ad0c7f44fe331a68b9375e0381
+    projectPath: Library\Artifacts\b3\b36be1ad0c7f44fe331a68b9375e0381
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\b7\b70547605645b0fef1fe4d2cc1f0c8a1
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\b7\b70547605645b0fef1fe4d2cc1f0c8a1
+    projectPath: Library\Artifacts\b7\b70547605645b0fef1fe4d2cc1f0c8a1
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\bc\bc23fa14b62ef80f1a7d7c84756c63ce
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\bc\bc23fa14b62ef80f1a7d7c84756c63ce
+    projectPath: Library\Artifacts\bc\bc23fa14b62ef80f1a7d7c84756c63ce
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\bd\bd3b3e5efd1936c5316dab4dc453bbb0
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\bd\bd3b3e5efd1936c5316dab4dc453bbb0
+    projectPath: Library\Artifacts\bd\bd3b3e5efd1936c5316dab4dc453bbb0
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\c4\c446293d0908ef5fbc19d9fac2e01abf
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\c4\c446293d0908ef5fbc19d9fac2e01abf
+    projectPath: Library\Artifacts\c4\c446293d0908ef5fbc19d9fac2e01abf
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\c9\c9f91a9a80efbe1057c3863d6ce1725a
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\c9\c9f91a9a80efbe1057c3863d6ce1725a
+    projectPath: Library\Artifacts\c9\c9f91a9a80efbe1057c3863d6ce1725a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\cc\cc26ce7c9a970c0428eef69a9913832f
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\cc\cc26ce7c9a970c0428eef69a9913832f
+    projectPath: Library\Artifacts\cc\cc26ce7c9a970c0428eef69a9913832f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\d1\d186fa40ae65a4021967bd50673a4f35
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\d1\d186fa40ae65a4021967bd50673a4f35
+    projectPath: Library\Artifacts\d1\d186fa40ae65a4021967bd50673a4f35
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\d4\d4fb3aa8cbd333f813d6376b2be87c5a
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\d4\d4fb3aa8cbd333f813d6376b2be87c5a
+    projectPath: Library\Artifacts\d4\d4fb3aa8cbd333f813d6376b2be87c5a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\e0\e0b88e15d747efc77a6237a7e1877d01
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\e0\e0b88e15d747efc77a6237a7e1877d01
+    projectPath: Library\Artifacts\e0\e0b88e15d747efc77a6237a7e1877d01
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\e9\e975c2f2a24dc22097accd8bafca38fe
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\e9\e975c2f2a24dc22097accd8bafca38fe
+    projectPath: Library\Artifacts\e9\e975c2f2a24dc22097accd8bafca38fe
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\f4\f46432802e44c0948f120ebbf84daf71
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\f4\f46432802e44c0948f120ebbf84daf71
+    projectPath: Library\Artifacts\f4\f46432802e44c0948f120ebbf84daf71
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\f7\f7c624b7f6628a51fb05fa63e123b6d6
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\f7\f7c624b7f6628a51fb05fa63e123b6d6
+    projectPath: Library\Artifacts\f7\f7c624b7f6628a51fb05fa63e123b6d6
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\fa\faa7a0fd36ebceb5ce4b35c1b0c0e17b
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\fa\faa7a0fd36ebceb5ce4b35c1b0c0e17b
+    projectPath: Library\Artifacts\fa\faa7a0fd36ebceb5ce4b35c1b0c0e17b
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Artifacts\ff\ffd8914e0ccda982a0c31023555f979d
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Artifacts\ff\ffd8914e0ccda982a0c31023555f979d
+    projectPath: Library\Artifacts\ff\ffd8914e0ccda982a0c31023555f979d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\1900b0aE.dag
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag
+    projectPath: Library\Bee\1900b0aE.dag
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\1900b0aE.dag.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag.json
+    projectPath: Library\Bee\1900b0aE.dag.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\1900b0aE.dag.outputdata
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag.outputdata
+    projectPath: Library\Bee\1900b0aE.dag.outputdata
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\1900b0aE.dag_derived
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag_derived
+    projectPath: Library\Bee\1900b0aE.dag_derived
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\1900b0aE.dag_fsmtime
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE.dag_fsmtime
+    projectPath: Library\Bee\1900b0aE.dag_fsmtime
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\1900b0aE-inputdata.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\1900b0aE-inputdata.json
+    projectPath: Library\Bee\1900b0aE-inputdata.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.dll
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.pdb
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.pdb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.ref.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.ref.dll
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp.ref.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.pdb
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.ref.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.ref.dll
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.ref.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Assembly-CSharp-Editor-firstpass.rsp
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\artifacts\1900b0aE.dag\PsdPlugin.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\PsdPlugin.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\PsdPlugin.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Triangle.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Triangle.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Animation.Triangle.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Common.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Common.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Common.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Common.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Common.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Common.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.IK.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.IK.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.IK.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.IK.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.IK.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.IK.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Path.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Path.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Path.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.PixelPerfect.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.PixelPerfect.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.PixelPerfect.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.PixelPerfect.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.PixelPerfect.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.PixelPerfect.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Psdimporter.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Psdimporter.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Psdimporter.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Sprite.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Sprite.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Sprite.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.SpriteShape.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.SpriteShape.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.SpriteShape.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.SpriteShape.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.SpriteShape.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.SpriteShape.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Extras.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Extras.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Extras.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Extras.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Extras.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.2D.Tilemap.Extras.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.CollabProxy.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.CollabProxy.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.CollabProxy.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.InputSystem.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.InputSystem.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.InputSystem.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.InternalAPIEditorBridge.001.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.InternalAPIEditorBridge.001.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.InternalAPIEditorBridge.001.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.InternalAPIEngineBridge.001.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.InternalAPIEngineBridge.001.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.InternalAPIEngineBridge.001.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Mathematics.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Mathematics.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Mathematics.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Mathematics.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Mathematics.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Mathematics.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Postprocessing.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Postprocessing.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Postprocessing.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Postprocessing.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Postprocessing.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Postprocessing.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipeline.Universal.ShaderLibrary.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipeline.Universal.ShaderLibrary.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipeline.Universal.ShaderLibrary.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.ShaderLibrary.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.ShaderLibrary.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Core.ShaderLibrary.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Runtime.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Runtime.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Runtime.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Shaders.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Shaders.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.RenderPipelines.Universal.Shaders.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Searcher.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Searcher.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Searcher.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.ShaderGraph.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.ShaderGraph.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.ShaderGraph.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.ShaderGraph.Utilities.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.ShaderGraph.Utilities.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.ShaderGraph.Utilities.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.TextMeshPro.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.TextMeshPro.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.TextMeshPro.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.TextMeshPro.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.TextMeshPro.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.TextMeshPro.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Timeline.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Timeline.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Timeline.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.Timeline.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.Timeline.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.Timeline.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Core.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Core.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Core.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Core.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Core.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Core.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Flow.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Flow.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Flow.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Flow.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Flow.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.Flow.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.State.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.State.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.State.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.State.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.State.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VisualScripting.State.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\Unity.VSCode.Editor.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\Unity.VSCode.Editor.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\Unity.VSCode.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\UnityEditor.UI.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\UnityEditor.UI.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\UnityEditor.UI.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\UnityEngine.UI.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\UnityEngine.UI.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\UnityEngine.UI.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\artifacts\1900b0aE.dag\VSSettingsProvider.rsp
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\artifacts\1900b0aE.dag\VSSettingsProvider.rsp
+    projectPath: Library\Bee\artifacts\1900b0aE.dag\VSSettingsProvider.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\profiler.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\profiler.json
+    projectPath: Library\Bee\profiler.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\tundra.digestcache
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\tundra.digestcache
+    projectPath: Library\Bee\tundra.digestcache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\tundra.log.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\tundra.log.json
+    projectPath: Library\Bee\tundra.log.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\TundraBuildState.state
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\TundraBuildState.state
+    projectPath: Library\Bee\TundraBuildState.state
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\TundraBuildState.state.map
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Bee\TundraBuildState.state.map
+    projectPath: Library\Bee\TundraBuildState.state.map
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\EditorInstance.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gitlocks.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gitlocks.yaml
+    projectPath: Library\gfu\cache\gitlocks.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gitlog.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gitlog.yaml
+    projectPath: Library\gfu\cache\gitlog.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gitstatusentries.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gituser.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\gituser.yaml
+    projectPath: Library\gfu\cache\gituser.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\repoinfo.yaml
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\SceneVisibilityState.asset
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\SceneVisibilityState.asset
+    projectPath: Library\SceneVisibilityState.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Assembly-CSharp.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ScriptAssemblies\Assembly-CSharp.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Assembly-CSharp.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ScriptAssemblies\Assembly-CSharp.pdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Search\transactions.db
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\Search\transactions.db
+    projectPath: Library\Search\transactions.db
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\SourceAssetDB
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\SourceAssetDB
+    projectPath: Library\SourceAssetDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    projectPath: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\UIElements\EditorWindows\UnityEditor.PackageManager.UI.PackageManagerWindow.pref
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Library\UIElements\EditorWindows\UnityEditor.PackageManager.UI.PackageManagerWindow.pref
+    projectPath: Library\UIElements\EditorWindows\UnityEditor.PackageManager.UI.PackageManagerWindow.pref
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Logs\AssetImportWorker0.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\AssetImportWorker0.log
+    projectPath: Logs\AssetImportWorker0.log
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Logs\shadercompiler-AssetImportWorker0.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-AssetImportWorker0.log
+    projectPath: Logs\shadercompiler-AssetImportWorker0.log
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe1.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe1.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe1.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe2.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe2.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe2.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe3.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe3.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe3.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe4.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe4.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe4.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe5.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe5.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe5.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe6.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe6.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe6.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Logs\shadercompiler-UnityShaderCompiler.exe7.log
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Logs\shadercompiler-UnityShaderCompiler.exe7.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe7.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    projectPath: obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+    projectPath: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Temp\UnityLockfile
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Temp\UnityLockfile
+    projectPath: Temp\UnityLockfile
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\workerlic
+    fullPath: E:\nils\programmieren\fertig\C#\Unity\Benno\Temp\workerlic
+    projectPath: Temp\workerlic
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
