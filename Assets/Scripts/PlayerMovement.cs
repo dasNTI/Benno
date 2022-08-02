@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float walkingSpeed = 1;
+    private float walkSpeed = 0.1f;
     public bool free = true;
 
     private InputMaster Master;
@@ -50,8 +50,8 @@ public class PlayerMovement : MonoBehaviour
         float h = Master.MainInput.Dir.ReadValue<Vector2>().x;
         float v = Master.MainInput.Dir.ReadValue<Vector2>().y;
 
-        if (h != 0 && CheckDir(Vector2.right * h, bc.size.y)) transform.position += Vector3.right * h * walkingSpeed;
-        if (v != 0 && CheckDir(Vector2.up * v, bc.size.x)) transform.position += Vector3.up * v * walkingSpeed;
+        if (h != 0 && CheckDir(Vector2.right * h, bc.size.y)) transform.position += Vector3.right * h * walkSpeed;
+        if (v != 0 && CheckDir(Vector2.up * v, bc.size.x)) transform.position += Vector3.up * v * walkSpeed;
 
         if (Vector2.Angle(Vector2.up, new Vector2(h, v)) % 90 == 0 && new Vector2(h, v) != Vector2.zero)
         {
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         bool b = true;
-        float o = 0.05f + walkingSpeed;
+        float o = 0.05f + walkSpeed;
         dir = dir.normalized * (1 + o);
         Vector2 tdp = new Vector2(bc.bounds.center.x, bc.bounds.center.y);
 
