@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2022-11-30T19:29:52.778+01:00
-  initializedAtString: 2022-11-30T17:51:03.975+01:00
+  lastUpdatedAtString: 2022-11-30T22:27:08.051+01:00
+  initializedAtString: 2022-11-30T22:01:26.342+01:00
   localBranches:
   - name: main
     tracking: origin/main
   remoteBranches:
+  - name: origin/HEAD
+    tracking: '[None]'
   - name: origin/main
     tracking: '[None]'
   remotes:
@@ -43,9 +45,15 @@ MonoBehaviour:
     - origin
     subKeys:
     - Values:
+      - HEAD
       - main
     subKeyValues:
     - Values:
+      - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/dasNTI/Benno.git
+        trackingBranch: 
       - name: main
         remote:
           name: origin
