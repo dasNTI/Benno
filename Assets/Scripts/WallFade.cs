@@ -10,7 +10,9 @@ public class WallFade : MonoBehaviour
     private SpriteRenderer sr;
 
     public float touchingOp = 0.3f;
+    public float defaultOp = 1;
     public float FadeDur = 0.5f;
+    public bool inverted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,7 @@ public class WallFade : MonoBehaviour
 
     void Change(bool t)
     {
-        float o = t ? touchingOp : 1;
+        float o = t ? touchingOp : defaultOp;
         Color c = new Color(sr.color.r, sr.color.g, sr.color.b, o);
 
         DOTween.To(() => sr.color, x => sr.color = x, c, FadeDur);

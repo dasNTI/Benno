@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float walkSpeed = 0.1f;
+    public float walkSpeed = 0.1f;
     public bool free = true;
+    public float zOffset = 0;
 
     private InputMaster Master;
     private BoxCollider2D bc;
     private Animator ani;
     private SpriteRenderer sr;
-    public LayerMask lm;
-    public Sprite[] WalkSprites;
-
+    public LayerMask lmH;
+    public LayerMask lmV;
     private Vector2 WalkDir;
+    private bool idling = true;
+    private static string prevScene = "";
     
     void Awake()
     {
         Master = new InputMaster();
-        
     }
     private void Start()
     {
@@ -27,50 +30,57 @@ public class PlayerMovement : MonoBehaviour
         ani = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         WalkDir = Vector2.zero;
+
+        InitializePosition();
+        ani.StartPlayback();
     }
     private void OnEnable()
     {
         Master.Enable();
-        //Master.MainInput.Dir.performed += _ => checkOtherSides(1);
     }
-
-
+    private void OnDisable() {
+        Master.Disable();
+    }
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y + zOffset);
 
         if (!free)
         {
-            ani.SetInteger("Dir", 0);
-            ani.enabled = false;
-            sr.sprite = WalkSprites[(int)(180 + Mathf.Sign(WalkDir.x) * Vector2.Angle(Vector2.up, WalkDir)) / 90 - 1];
+            ani.playbackTime = 0;
+            ani.speed = 0;
             return;
         }
 
         float h = Master.MainInput.Dir.ReadValue<Vector2>().x;
         float v = Master.MainInput.Dir.ReadValue<Vector2>().y;
+        float heightCheckLengthFactor = 1.55f;
+        float widthCheckLengthFactor = 1.7f;
 
-        if (h != 0 && CheckDir(Vector2.right * h, bc.size.y)) transform.position += Vector3.right * h * walkSpeed;
-        if (v != 0 && CheckDir(Vector2.up * v, bc.size.x)) transform.position += Vector3.up * v * walkSpeed;
+        if (h != 0 && CheckDir(Vector2.right * h, bc.bounds.extents.y * heightCheckLengthFactor))
+            transform.position += Vector3.right * (h + Mathf.Sign(h) * Mathf.Abs(v) * (1 - Mathf.Sqrt(0.5f))) * walkSpeed;
+
+        if (v != 0 && CheckDir(Vector2.up * v, bc.bounds.extents.x * widthCheckLengthFactor)) 
+            transform.position += Vector3.up * (v + Mathf.Sign(v) * Mathf.Abs(h) * (1 - Mathf.Sqrt(0.5f))) * walkSpeed; 
 
         if (Vector2.Angle(Vector2.up, new Vector2(h, v)) % 90 == 0 && new Vector2(h, v) != Vector2.zero)
         {
-            int i = (int) (180 + Mathf.Sign(h) * Vector2.Angle(Vector2.up, new Vector2(h, v))) / 90;
-            WalkDir = new Vector2(h, v);
-            //Debug.Log(i);
+            Vector2 current = new Vector2(h, v);
+            if (current != WalkDir && current.magnitude == 1)
+                WalkDir = new Vector2(h, v);
+            
+            int i = (int) (-Vector2.SignedAngle(Vector2.up, WalkDir) + 180) / 90;
+            if (i == 0) i = 4;
 
-            ani.enabled = true;
+            ani.speed = 1;
             ani.SetInteger("Dir", i);
+
+            idling = false;
         }else if (Master.MainInput.Dir.ReadValue<Vector2>() == Vector2.zero)
         {
-            int i = (int) (180 + Mathf.Sign(WalkDir.x) * Vector2.Angle(Vector2.up, WalkDir)) / 90;
-
             ani.SetInteger("Dir", 0);
-            ani.enabled = false;
-            sr.sprite = WalkSprites[i - 1];
-            //Debug.Log(i - 1);
+            idlingcycle();
         }
-
     }
 
     bool CheckDir(Vector2 dir, float l)
@@ -83,14 +93,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (dir.x == 0)
         {
-            RaycastHit2D ray = Physics2D.Raycast(tdp + dir * bc.bounds.extents.y + Vector2.left * l / 2, Vector2.right, l, lm);
+            RaycastHit2D ray = Physics2D.Raycast(tdp + dir * bc.bounds.extents.y + Vector2.left * l / 2, Vector2.right, l, lmH);
 
             Debug.DrawRay(tdp + dir * bc.bounds.extents.y + Vector2.left * l / 2, Vector2.right * l, Color.green);
 
             if (ray.collider != null) b = false;
         }else
         {
-            RaycastHit2D ray = Physics2D.Raycast(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down, l, lm);
+            RaycastHit2D ray = Physics2D.Raycast(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down, l, lmV);
 
             Debug.DrawRay(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down * l, Color.green);
 
@@ -107,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 v = new Vector2(Mathf.Cos(i * Mathf.PI / 2), Mathf.Sin(i * Mathf.PI / 2));
             Vector2 tdp = new Vector2(transform.position.x, transform.position.y);
 
-            RaycastHit2D ray = Physics2D.Raycast(tdp + v * bc.bounds.extents.x + Vector2.left * l / 2, Vector2.right, l, lm);
+            RaycastHit2D ray = Physics2D.Raycast(tdp + v * bc.bounds.extents.x + Vector2.left * l / 2, Vector2.right, l, lmH);
 
             if (ray.collider != null)
             {
@@ -116,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     transform.position -= new Vector3(v.x, v.y, 0) * 0.005f;
 
-                    RaycastHit2D r = Physics2D.Raycast(tdp + v * bc.bounds.extents.x + Vector2.left * l / 2, Vector2.right, l, lm);
+                    RaycastHit2D r = Physics2D.Raycast(tdp + v * bc.bounds.extents.x + Vector2.left * l / 2, Vector2.right, l, lmH);
                     if (r.collider == null) t = false;
                 }
             }
@@ -126,5 +136,245 @@ public class PlayerMovement : MonoBehaviour
     public void walkTo(float x, float y, float dur)
     {
         
+    }
+
+    private void idlingcycle() 
+    {
+        if (idling) return;
+        idling = true;
+
+        void blink() {
+            GameObject EyeCover = transform.Find("EyeCover").gameObject;
+            Animator ani = EyeCover.GetComponent<Animator>();
+
+            ani.SetBool("Blink", true);
+        }
+
+        IEnumerator cycle()
+        {
+            while (idling) {
+                if (!idling) yield break;
+
+                blink();
+
+                yield return new WaitForSeconds(UnityEngine.Random.Range(1, 1));
+            }
+        }
+        StartCoroutine(cycle());
+    }
+
+    private void InitializePosition()
+    {
+        if (prevScene.Length < 1)
+        {
+            prevScene = SceneManager.GetActiveScene().name;
+            return;
+        }
+
+        string[] possiblePrevScenes = null;
+        Vector2[,] positionsPlusRotations = null;
+
+
+        switch (SceneManager.GetActiveScene().name) // First Vector = Position, 2nd Vector = Rotation
+        {
+            // Erdgeschoss
+            case "30er":
+                positionsPlusRotations = new Vector2[,] 
+                {
+                    {
+                        new Vector2(-85.1f, 33.83f),
+                        Vector2.down
+                    },
+                    {
+                        new Vector2(-61.77f, 26.79f),
+                        Vector2.up
+                    },
+                    {
+                        new Vector2(-22.21f, 32.95f),
+                        Vector2.down
+                    },
+                    {
+                        new Vector2(-20.14f, 27),
+                        Vector2.up
+                    }
+                };
+                possiblePrevScenes = new string[4]
+                {
+                    "MusicHall",
+                    "MilkHall",
+                    "MusicGeographyHallway",
+                    "Agora"
+                };
+                break;
+            case "Agora":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(-22.59f, 25.61f),
+                        Vector2.down
+                    },
+                    {
+                        new Vector2(-26.07f, 1.44f),
+                        Vector2.right
+                    },
+                    {
+                        new Vector2(3.91f, 24.11f),
+                        Vector2.left
+                    }
+                };
+                possiblePrevScenes = new string[3]
+                {
+                    "30er",
+                    "ScienceHallway",
+                    "TeacherFoyer"
+                };
+                break;
+            case "Classroom":
+                positionsPlusRotations = new Vector2[,] { { new Vector2(0, 0), Vector2.up } }; //temp
+                possiblePrevScenes = new string[1] { "30er" };
+                break;
+            case "Geography":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(-16.69f, 67.82f),
+                        Vector2.right
+                    },
+                    {
+                        new Vector2(14.4f, 67.72f),
+                        Vector2.left
+                    },
+                    {
+                        new Vector2(14.04f, 63.93f),
+                        Vector2.up
+                    }
+                };
+                possiblePrevScenes = new string[3]
+                {
+                    "MusicGeographyHallway",
+                    "Mensa",
+                    "TeacherFoyer"
+                };
+                break;
+            case "Mensa":
+
+                break;
+            case "MilkHall":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(-61.78f, 5.2f),
+                        Vector2.up
+                    },
+                    {
+                        new Vector2(-61.62f, 24.82f),
+                        Vector2.down
+                    }
+                };
+                possiblePrevScenes = new string[2]
+                {
+                    "ScienceHallway",
+                    "30er"
+                };
+                break;
+            case "Music":
+                positionsPlusRotations = new Vector2[,] { { new Vector2(-88.05f, 52.21f), Vector2.left } };
+                possiblePrevScenes = new string[1] { "MusicHall" };
+                break;
+            case "MusicGeographyHallway":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(-77.21f, 54.57f),
+                        Vector2.right
+                    },
+                    {
+                        new Vector2(-22.25f, 35.25f),
+                        Vector2.up
+                    },
+                    {
+                        new Vector2(-16.77f, 67.95f),
+                        Vector2.left
+                    }
+                };
+                possiblePrevScenes = new string[3]
+                {
+                    "MusicHall",
+                    "30er",
+                    "Geography"
+                };
+                break;
+            case "MusicHall":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(-93.96f, 52.19f),
+                        Vector2.right
+                    },
+                    {
+                        new Vector2(-84.99f, 40.53f),
+                        Vector2.up
+                    },
+                    {
+                        new Vector2(-80.01f, 55.45f),
+                        Vector2.left
+                    }
+                };
+                possiblePrevScenes = new string[3]
+                {
+                    "Music",
+                    "30er",
+                    "MusicGeographyHallway"
+                };
+                break;
+            case "ScienceHallway":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(-61.73f, 3.1f),
+                        Vector2.down
+                    },
+                    {
+                        new Vector2(-27.01f, 1.7f),
+                        Vector2.left
+                    }
+                };
+                possiblePrevScenes = new string[2]
+                {
+                    "MilkHall",
+                    "Agora"
+                };
+                break;
+            case "TeacherFoyer":
+                positionsPlusRotations = new Vector2[,]
+                {
+                    {
+                        new Vector2(15.85f, 37.79f),
+                        Vector2.down
+                    },
+                    {
+                        new Vector2(6.37f, 25.08f),
+                        Vector2.left
+                    }
+                };
+                possiblePrevScenes = new string[2]
+                {
+                    "Geography",
+                    "Agora"
+                };
+                break;
+
+            default:
+                return;
+        }
+
+        if (possiblePrevScenes == null || positionsPlusRotations == null) return;
+
+        int prevSceneIndex = Array.IndexOf(possiblePrevScenes, prevScene);
+
+        transform.position = positionsPlusRotations[prevSceneIndex, 0];
+        WalkDir = positionsPlusRotations[prevSceneIndex, 1];
+
+        prevScene = SceneManager.GetActiveScene().name;
     }
 }

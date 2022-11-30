@@ -17,6 +17,7 @@ public class Speech : MonoBehaviour
 
     private int SelectedOption;
     private bool OptionsVisible = false;
+    private bool initfreestate = true;
     private Option[] CurrentOptions; 
 
     private InputMaster Master;
@@ -73,34 +74,21 @@ public class Speech : MonoBehaviour
         /*StartMonologue(new Line[] { 
             new Line("Klappt's?", 1, 1) 
         }, new Option[] {
-            new Option("Klappt.", () => {
-                Debug.Log("Wunderbar.");
-            }),
-            new Option("Klappt nicht.", () => {
-                StartMonologue(new Line[] {
-                    new Line("Wirklich?", 1, 2),
-                    new Line("Jetzt?", 1, 1)
-                }, new Option[] {
-                    new Option("Klappt.", () => {
-                        Debug.Log("Na geht doch.");
-                    }),
-                    new Option("Klappt nicht.", () => {
-                        Debug.Log("Scheise.");
-                    })
-                });
-            })
+            new Option("Ja", () => {Debug.Log("Toll"); }),
+            new Option("Nein", () => {Debug.Log("Scheise"); })
         });*/
     }
 
-    public void StartMonologue(Line[] Lines, Option[] Options = null, bool free = false)
+    public void StartMonologue(Line[] Lines, Option[] Options = null, bool free = false, Action onfinish = null)
     {
+        initfreestate = GameObject.Find("Player").GetComponent<PlayerMovement>().free;
         if (!free) GameObject.Find("Player").GetComponent<PlayerMovement>().free = false;
         Monologue.SetActive(true);
 
 
         IEnumerator d()
         {
-            if (Lines.Length != 0)
+            if (Lines != null)
             {
                 MonologueText.text = "";
                 if (MonologueOptions.transform.childCount != 0)
@@ -126,9 +114,9 @@ public class Speech : MonoBehaviour
                 }
             }
 
-            if (Options.Length != 0)
+            if (Options != null)
             {
-                float w = Mathf.Abs(MonologueOptions.GetComponent<RectTransform>().rect.width / (float) Options.Length);
+                float w = Mathf.Abs(MonologueOptions.GetComponent<RectTransform>().rect.width / (float)Options.Length);
                 float h = Mathf.Abs(MonologueOptions.GetComponent<RectTransform>().rect.height);
                 float fontsize = 0.035f;
 
@@ -138,15 +126,16 @@ public class Speech : MonoBehaviour
                 for (int i = 0; i < Options.Length; i++)
                 {
                     GameObject option = new GameObject($"MonologueOption{i}");
-                    
+
                     RectTransform rt = option.AddComponent<RectTransform>();
-                        rt.anchorMin = Vector2.up / 2;
-                        rt.anchorMax = Vector2.up / 2;
-                        rt.pivot = Vector2.up / 2;
-                        rt.SetParent(MonologueOptions.transform);
-                        rt.anchoredPosition = Vector2.right * w * i;
-                        rt.sizeDelta = new Vector2(w, h);
-                        rt.localScale = Vector3.one;
+                    rt.anchorMin = Vector2.up / 2;
+                    rt.anchorMax = Vector2.up / 2;
+                    rt.pivot = Vector2.up / 2;
+                    rt.SetParent(MonologueOptions.transform);
+                    rt.anchoredPosition = Vector2.right * w * i;
+                    rt.sizeDelta = new Vector2(w, h);
+                    rt.localScale = Vector3.one;
+                    rt.position = new Vector3(rt.position.x, rt.position.y, 0.1f);
                     TMPro.TextMeshProUGUI tmp = option.AddComponent<TMPro.TextMeshProUGUI>();
                     tmp.font = Font;
                     tmp.fontSize = fontsize * Screen.height;
@@ -158,6 +147,11 @@ public class Speech : MonoBehaviour
                 OptionsVisible = true;
                 Master.Enable();
             }
+            else if (onfinish != null) onfinish();
+
+            if (Options != null) yield break;
+            Monologue.SetActive(false);
+            GameObject.Find("Player").GetComponent<PlayerMovement>().free = initfreestate;
         }
         StartCoroutine(d());
     }

@@ -33,6 +33,30 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Enter"",
+                    ""type"": ""Button"",
+                    ""id"": ""81996e76-651d-4da8-b83c-ff11c9aa2157"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""42ad165e-6305-46c0-833d-8588f091c36e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9de65d6-5947-4c45-b451-c89384742062"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -204,7 +228,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c4fd148c-a567-4ab6-b05a-0019388a5593"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -233,6 +257,83 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ba364f9-dcc9-4592-a06b-745e90ed870a"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89cb3478-d213-4dcf-a4ec-e0fa4f1d7d72"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Enter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e0a7e3a-b1a3-4815-8eaa-145f8ff84f22"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Enter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c2e417b-3af5-4d37-a75c-53ae531f0a6d"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ac10cecc-c7c9-4f06-abeb-c04430fd9d23"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65d87832-8c34-4361-889c-88c9464710b0"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9e9de31c-be34-4762-9e82-49cea27a3989"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -243,6 +344,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_MainInput = asset.FindActionMap("MainInput", throwIfNotFound: true);
         m_MainInput_Dir = m_MainInput.FindAction("Dir", throwIfNotFound: true);
         m_MainInput_Click = m_MainInput.FindAction("Click", throwIfNotFound: true);
+        m_MainInput_Enter = m_MainInput.FindAction("Enter", throwIfNotFound: true);
+        m_MainInput_Inventory = m_MainInput.FindAction("Inventory", throwIfNotFound: true);
+        m_MainInput_Quit = m_MainInput.FindAction("Quit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -294,12 +398,18 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private IMainInputActions m_MainInputActionsCallbackInterface;
     private readonly InputAction m_MainInput_Dir;
     private readonly InputAction m_MainInput_Click;
+    private readonly InputAction m_MainInput_Enter;
+    private readonly InputAction m_MainInput_Inventory;
+    private readonly InputAction m_MainInput_Quit;
     public struct MainInputActions
     {
         private @InputMaster m_Wrapper;
         public MainInputActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @Dir => m_Wrapper.m_MainInput_Dir;
         public InputAction @Click => m_Wrapper.m_MainInput_Click;
+        public InputAction @Enter => m_Wrapper.m_MainInput_Enter;
+        public InputAction @Inventory => m_Wrapper.m_MainInput_Inventory;
+        public InputAction @Quit => m_Wrapper.m_MainInput_Quit;
         public InputActionMap Get() { return m_Wrapper.m_MainInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -315,6 +425,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Click.started -= m_Wrapper.m_MainInputActionsCallbackInterface.OnClick;
                 @Click.performed -= m_Wrapper.m_MainInputActionsCallbackInterface.OnClick;
                 @Click.canceled -= m_Wrapper.m_MainInputActionsCallbackInterface.OnClick;
+                @Enter.started -= m_Wrapper.m_MainInputActionsCallbackInterface.OnEnter;
+                @Enter.performed -= m_Wrapper.m_MainInputActionsCallbackInterface.OnEnter;
+                @Enter.canceled -= m_Wrapper.m_MainInputActionsCallbackInterface.OnEnter;
+                @Inventory.started -= m_Wrapper.m_MainInputActionsCallbackInterface.OnInventory;
+                @Inventory.performed -= m_Wrapper.m_MainInputActionsCallbackInterface.OnInventory;
+                @Inventory.canceled -= m_Wrapper.m_MainInputActionsCallbackInterface.OnInventory;
+                @Quit.started -= m_Wrapper.m_MainInputActionsCallbackInterface.OnQuit;
+                @Quit.performed -= m_Wrapper.m_MainInputActionsCallbackInterface.OnQuit;
+                @Quit.canceled -= m_Wrapper.m_MainInputActionsCallbackInterface.OnQuit;
             }
             m_Wrapper.m_MainInputActionsCallbackInterface = instance;
             if (instance != null)
@@ -325,6 +444,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Click.started += instance.OnClick;
                 @Click.performed += instance.OnClick;
                 @Click.canceled += instance.OnClick;
+                @Enter.started += instance.OnEnter;
+                @Enter.performed += instance.OnEnter;
+                @Enter.canceled += instance.OnEnter;
+                @Inventory.started += instance.OnInventory;
+                @Inventory.performed += instance.OnInventory;
+                @Inventory.canceled += instance.OnInventory;
+                @Quit.started += instance.OnQuit;
+                @Quit.performed += instance.OnQuit;
+                @Quit.canceled += instance.OnQuit;
             }
         }
     }
@@ -333,5 +461,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     {
         void OnDir(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
+        void OnEnter(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
     }
 }

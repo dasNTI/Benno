@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/ScienceHallway.unity
+    guid: edcbbb2d2b89998489925c7c1e861c14
+  - enabled: 1
+    path: Assets/Scenes/MusicHall.unity
+    guid: ba6320a9aa1775d4dabd3ecbcf94847e
+  - enabled: 1
+    path: Assets/Scenes/MusicGeographyHallway.unity
+    guid: e515af1930ff56e4ea6ec1794f718c8a
+  - enabled: 1
+    path: Assets/Scenes/Music.unity
+    guid: 8f3aee7964d3d204d993f9f446951e42
+  - enabled: 1
+    path: Assets/Scenes/MilkHall.unity
+    guid: 18132f24719a3fd44bc3996d2d9a140e
+  - enabled: 1
+    path: Assets/Scenes/Mensa.unity
+    guid: a8c21fa5a5fada84ba58b08da40aec5c
+  - enabled: 1
+    path: Assets/Scenes/Geography.unity
+    guid: f882f635407f9774eacf72f2517cec85
+  - enabled: 1
+    path: Assets/Scenes/30er.unity
+    guid: c042482266c76ac41a779de2b3d1ee68
+  - enabled: 1
+    path: Assets/Scenes/Agora.unity
+    guid: c79d58e5c655bf7438341e85906528a2
+  - enabled: 1
+    path: Assets/Scenes/TeachersRoom.unity
+    guid: c6db426f9a562cf49b415ea1da878fc9
+  - enabled: 1
+    path: Assets/Scenes/TeacherFoyer.unity
+    guid: 89d75b843735b6e4c9e40c0a377221ae
   m_configObjects: {}
