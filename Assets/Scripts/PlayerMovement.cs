@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (!free)
         {
-            ani.playbackTime = 0;
             ani.speed = 0;
             return;
         }
@@ -79,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
         }else if (Master.MainInput.Dir.ReadValue<Vector2>() == Vector2.zero)
         {
             ani.SetInteger("Dir", 0);
+            WalkDir = Vector2.down;
             idlingcycle();
         }
     }
@@ -172,55 +172,36 @@ public class PlayerMovement : MonoBehaviour
         }
 
         string[] possiblePrevScenes = null;
-        Vector2[,] positionsPlusRotations = null;
+        Vector2[] positionsPlusRotations = null;
 
 
         switch (SceneManager.GetActiveScene().name) // First Vector = Position, 2nd Vector = Rotation
         {
             // Erdgeschoss
             case "30er":
-                positionsPlusRotations = new Vector2[,] 
+                positionsPlusRotations = new Vector2[5] 
                 {
-                    {
-                        new Vector2(-85.1f, 33.83f),
-                        Vector2.down
-                    },
-                    {
-                        new Vector2(-61.77f, 26.79f),
-                        Vector2.up
-                    },
-                    {
-                        new Vector2(-22.21f, 32.95f),
-                        Vector2.down
-                    },
-                    {
-                        new Vector2(-20.14f, 27),
-                        Vector2.up
-                    }
+                    new Vector2(-85.1f, 33.83f),
+                    new Vector2(-61.77f, 26.79f),
+                    new Vector2(-22.21f, 32.95f),
+                    new Vector2(-20.14f, 27),
+                    new Vector2(-74.85f, 29.55f)
                 };
-                possiblePrevScenes = new string[4]
+                possiblePrevScenes = new string[5]
                 {
                     "MusicHall",
                     "MilkHall",
                     "MusicGeographyHallway",
-                    "Agora"
+                    "Agora",
+                    "Classroom"
                 };
                 break;
             case "Agora":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[3]
                 {
-                    {
-                        new Vector2(-22.59f, 25.61f),
-                        Vector2.down
-                    },
-                    {
-                        new Vector2(-26.07f, 1.44f),
-                        Vector2.right
-                    },
-                    {
-                        new Vector2(3.91f, 24.11f),
-                        Vector2.left
-                    }
+                    new Vector2(-22.59f, 25.61f),
+                    new Vector2(-26.07f, 1.44f),
+                    new Vector2(7.5f, 23.95f)
                 };
                 possiblePrevScenes = new string[3]
                 {
@@ -230,24 +211,15 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "Classroom":
-                positionsPlusRotations = new Vector2[,] { { new Vector2(0, 0), Vector2.up } }; //temp
+                positionsPlusRotations = new Vector2[1] { new Vector2(-71.15f, 31.5f) }; //temp
                 possiblePrevScenes = new string[1] { "30er" };
                 break;
             case "Geography":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[3]
                 {
-                    {
-                        new Vector2(-16.69f, 67.82f),
-                        Vector2.right
-                    },
-                    {
-                        new Vector2(14.4f, 67.72f),
-                        Vector2.left
-                    },
-                    {
-                        new Vector2(14.04f, 63.93f),
-                        Vector2.up
-                    }
+                    new Vector2(-16.69f, 67.82f),
+                    new Vector2(14.4f, 67.72f),
+                    new Vector2(14.04f, 63.93f)
                 };
                 possiblePrevScenes = new string[3]
                 {
@@ -260,16 +232,10 @@ public class PlayerMovement : MonoBehaviour
 
                 break;
             case "MilkHall":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[2]
                 {
-                    {
-                        new Vector2(-61.78f, 5.2f),
-                        Vector2.up
-                    },
-                    {
-                        new Vector2(-61.62f, 24.82f),
-                        Vector2.down
-                    }
+                    new Vector2(-61.78f, 5.2f),
+                    new Vector2(-61.62f, 24.82f)
                 };
                 possiblePrevScenes = new string[2]
                 {
@@ -278,24 +244,15 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "Music":
-                positionsPlusRotations = new Vector2[,] { { new Vector2(-88.05f, 52.21f), Vector2.left } };
+                positionsPlusRotations = new Vector2[1] { new Vector2(-88.05f, 52.21f) };
                 possiblePrevScenes = new string[1] { "MusicHall" };
                 break;
             case "MusicGeographyHallway":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[3]
                 {
-                    {
-                        new Vector2(-77.21f, 54.57f),
-                        Vector2.right
-                    },
-                    {
-                        new Vector2(-22.25f, 35.25f),
-                        Vector2.up
-                    },
-                    {
-                        new Vector2(-16.77f, 67.95f),
-                        Vector2.left
-                    }
+                    new Vector2(-77.21f, 54.57f),
+                    new Vector2(-22.25f, 35.25f),
+                    new Vector2(-16.77f, 67.95f)
                 };
                 possiblePrevScenes = new string[3]
                 {
@@ -305,20 +262,11 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "MusicHall":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[3]
                 {
-                    {
-                        new Vector2(-93.96f, 52.19f),
-                        Vector2.right
-                    },
-                    {
-                        new Vector2(-84.99f, 40.53f),
-                        Vector2.up
-                    },
-                    {
-                        new Vector2(-80.01f, 55.45f),
-                        Vector2.left
-                    }
+                    new Vector2(-93.96f, 52.19f),
+                    new Vector2(-84.99f, 40.53f),
+                    new Vector2(-80.01f, 55.45f)
                 };
                 possiblePrevScenes = new string[3]
                 {
@@ -328,16 +276,10 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "ScienceHallway":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[2]
                 {
-                    {
-                        new Vector2(-61.73f, 3.1f),
-                        Vector2.down
-                    },
-                    {
-                        new Vector2(-27.01f, 1.7f),
-                        Vector2.left
-                    }
+                    new Vector2(-61.73f, 3.1f),
+                    new Vector2(-27.01f, 1.7f)
                 };
                 possiblePrevScenes = new string[2]
                 {
@@ -346,16 +288,10 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "TeacherFoyer":
-                positionsPlusRotations = new Vector2[,]
+                positionsPlusRotations = new Vector2[2]
                 {
-                    {
-                        new Vector2(15.85f, 37.79f),
-                        Vector2.down
-                    },
-                    {
-                        new Vector2(6.37f, 25.08f),
-                        Vector2.left
-                    }
+                    new Vector2(15.85f, 37.79f),
+                    new Vector2(6.37f, 25.08f)
                 };
                 possiblePrevScenes = new string[2]
                 {
@@ -372,8 +308,7 @@ public class PlayerMovement : MonoBehaviour
 
         int prevSceneIndex = Array.IndexOf(possiblePrevScenes, prevScene);
 
-        transform.position = positionsPlusRotations[prevSceneIndex, 0];
-        WalkDir = positionsPlusRotations[prevSceneIndex, 1];
+        transform.position = positionsPlusRotations[prevSceneIndex];
 
         prevScene = SceneManager.GetActiveScene().name;
     }

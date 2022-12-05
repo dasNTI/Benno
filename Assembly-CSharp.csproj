@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\AlertTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\SceneTrigger.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\CameraBlackBars.cs" />
      <Compile Include="Assets\Scripts\CameraTransition.cs" />
      <Compile Include="Assets\Scripts\AlertIcon.cs" />

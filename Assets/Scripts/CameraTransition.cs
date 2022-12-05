@@ -42,7 +42,7 @@ public class CameraTransition : MonoBehaviour
                     {
                         float height = Screen.height * (i / Transition0Slices);
                         rt.sizeDelta = new Vector2(rt.sizeDelta.x, height);
-                        yield return new WaitForSeconds(Duration / Transition0Slices);
+                        yield return new WaitForSecondsRealtime(Duration / Transition0Slices);
                     }
                     break;
 
@@ -51,7 +51,7 @@ public class CameraTransition : MonoBehaviour
                     for (float i = Transition1Steps; i >= 0; i--)
                     {
                         ri.color = new Color(0, 0, 0, i / Transition1Steps);
-                        yield return new WaitForSeconds(Duration / Transition1Steps);
+                        yield return new WaitForSecondsRealtime(Duration / Transition1Steps);
                     }
                     break;
             }
@@ -79,7 +79,7 @@ public class CameraTransition : MonoBehaviour
                     {
                         float height = Screen.height * (i / Transition0Slices);
                         rt.sizeDelta = new Vector2(rt.sizeDelta.x, height);
-                        yield return new WaitForSeconds(Duration / Transition0Slices);
+                        yield return new WaitForSecondsRealtime(Duration / Transition0Slices);
                     }
                     break;
 
@@ -88,7 +88,7 @@ public class CameraTransition : MonoBehaviour
                     for (float i = 0; i <= Transition1Steps; i++)
                     {
                         ri.color = new Color(0, 0, 0, i / Transition1Steps);
-                        yield return new WaitForSeconds(Duration / Transition1Steps);
+                        yield return new WaitForSecondsRealtime(Duration / Transition1Steps);
                     }
                     break;
             };

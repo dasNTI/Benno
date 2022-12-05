@@ -1112,7 +1112,7 @@ MonoBehaviour:
   AlertPosition: {x: -107.87, y: -2.7}
   enter: 1
   Txt: Chemieraum
-  EnterScene: 
+  EnterScene: ScienceHallway
 --- !u!61 &191116822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2568,7 +2568,7 @@ MonoBehaviour:
   AlertPosition: {x: -40.02, y: -2.7}
   enter: 1
   Txt: Bioraum
-  EnterScene: Geography
+  EnterScene: ScienceHallway
 --- !u!61 &512074522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3545,7 +3545,7 @@ MonoBehaviour:
   AlertPosition: {x: -91.72, y: -2.7}
   enter: 1
   Txt: Physikraum
-  EnterScene: 
+  EnterScene: ScienceHallway
 --- !u!61 &628065578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8770,7 +8770,7 @@ MonoBehaviour:
   AlertPosition: {x: -62.57, y: -2.7}
   enter: 1
   Txt: Mintraum
-  EnterScene: 
+  EnterScene: ScienceHallway
 --- !u!61 &1937773888
 BoxCollider2D:
   m_ObjectHideFlags: 0

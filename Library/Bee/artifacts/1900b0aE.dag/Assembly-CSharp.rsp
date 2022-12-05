@@ -366,6 +366,7 @@
 "Assets/Scripts/CameraBlackBars.cs"
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/CameraTransition.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/SceneTrigger.cs"
 "Assets/Scripts/Speech.cs"

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Music.unity
+- path: Assets/Scenes/Agora.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
