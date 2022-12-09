@@ -7,8 +7,10 @@ public class StairMovementTrigger : MonoBehaviour
     private BoxCollider2D bc;
     private GameObject player;
     private InputMaster Master;
+    private bool entered = false;
 
     public float ratio;
+    public bool adjustZ = true;
 
     void Start()
     {
@@ -21,13 +23,13 @@ public class StairMovementTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xdif = Mathf.Abs(transform.position.x - player.transform.position.x);
-        float ydif = Mathf.Abs(transform.position.y - player.transform.position.y + bc.bounds.extents.y);
+        //float xdif = Mathf.Abs(transform.position.x - player.transform.position.x);
+        //float ydif = Mathf.Abs(transform.position.y - player.transform.position.y + bc.bounds.extents.y);
 
-        bool xtest = xdif < Mathf.Abs(bc.bounds.extents.x - player.GetComponent<BoxCollider2D>().bounds.extents.x);
-        bool ytest = ydif < Mathf.Abs(bc.bounds.extents.y);
+        //bool xtest = xdif < Mathf.Abs(bc.bounds.extents.x - player.GetComponent<BoxCollider2D>().bounds.extents.x);
+        //bool ytest = ydif < Mathf.Abs(bc.bounds.extents.y);
 
-        if (!(xtest && ytest)) return;
+        if (!entered) return;
         //Debug.Log("yeet");
 
         float dir = Master.MainInput.Dir.ReadValue<Vector2>().x * player.GetComponent<PlayerMovement>().walkSpeed * ratio;
@@ -35,7 +37,7 @@ public class StairMovementTrigger : MonoBehaviour
         //if (!CheckDir(Vector2.up * Mathf.Sign(dir), player.GetComponent<BoxCollider2D>().bounds.extents.x * 1.77f)) return;
 
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + dir, player.transform.position.z);
-        player.GetComponent<PlayerMovement>().zOffset -= dir;
+        if (adjustZ) player.GetComponent<PlayerMovement>().zOffset -= dir;
     }
 
     bool CheckDir(Vector2 dir, float l)
@@ -64,5 +66,13 @@ public class StairMovementTrigger : MonoBehaviour
         }
 
         return b;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        entered = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        entered = false;
     }
 }

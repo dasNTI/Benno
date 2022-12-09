@@ -16,7 +16,6 @@ public class SceneTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("yeet");
         if (!active) return;
         if (entering) return;
 

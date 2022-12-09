@@ -33,8 +33,8 @@ public class CameraMovement : MonoBehaviour
         float cx = Mathf.Clamp(x, UpperLeftLimit.x, LowerRightLimit.x);
         float cy = Mathf.Clamp(y, LowerRightLimit.y, UpperLeftLimit.y);
 
-        //if (input.MainInput.Dir.ReadValue<Vector2>().x != 0) 
-        //    DOTween.To(() => walkOffset, x => walkOffset = x, Mathf.Cos((float)Time.timeAsDouble * 5) * 0.01f, 1f);
+        if (input.MainInput.Dir.ReadValue<Vector2>().x != 0) 
+            DOTween.To(() => walkOffset, x => walkOffset = x, -Mathf.Pow(Mathf.Cos((float)Time.timeAsDouble * 5), 4) * 0.01f, 1f);
 
         if (input.MainInput.Dir.ReadValue<Vector2>().x == 0 && walkOffset != 0) 
             DOTween.To(() => walkOffset, x => walkOffset = x, 0, 1f);

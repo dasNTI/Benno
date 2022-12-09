@@ -83,7 +83,7 @@ public class PauseMenu : MonoBehaviour
     private void OnNavigate() {
         if (!active) return;
 
-        bool sound = false;
+        bool sound = false; 
         Vector2 dir = Master.MainInput.Dir.ReadValue<Vector2>();
 
         void select(string option, bool selected) {
@@ -152,6 +152,8 @@ public class PauseMenu : MonoBehaviour
                 }
             break;
         }
+
+        if (sound) return;
     }
 
     void OnPress() {
