@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\StairMovementTrigger.cs" />
+     <Compile Include="Assets\Scripts\MusicSystem.cs" />
      <Compile Include="Assets\Scripts\AlertTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\SceneTrigger.cs" />

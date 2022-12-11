@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
     public LayerMask lmH;
     public LayerMask lmV;
-    private Vector2 WalkDir;
+    private static Vector2 WalkDir;
     private bool idling = true;
     private static string prevScene = "";
     
@@ -62,17 +62,17 @@ public class PlayerMovement : MonoBehaviour
         if (v != 0 && CheckDir(Vector2.up * v, bc.bounds.extents.x * widthCheckLengthFactor)) 
             transform.position += Vector3.up * (v + Mathf.Sign(v) * Mathf.Abs(h) * (1 - Mathf.Sqrt(0.5f))) * walkSpeed; 
 
-        if (Vector2.Angle(Vector2.up, new Vector2(h, v)) % 90 == 0 && new Vector2(h, v) != Vector2.zero)
+        if (new Vector2(h, v) != Vector2.zero)
         {
-            Vector2 current = new Vector2(h, v);
-            if (current != WalkDir && current.magnitude == 1)
-                WalkDir = new Vector2(h, v);
-            
-            int i = (int) (-Vector2.SignedAngle(Vector2.up, WalkDir) + 180) / 90;
-            if (i == 0) i = 4;
+            if (Vector2.Angle(Vector2.up, new Vector2(h, v)) % 90 == 0) {
+                Vector2 current = new Vector2(h, v);
+                if (current != WalkDir && current.magnitude == 1)
+                    WalkDir = new Vector2(h, v);
+            }
+
+            adjustAniDir();
 
             ani.speed = 1;
-            ani.SetInteger("Dir", i);
 
             idling = false;
         }else if (Master.MainInput.Dir.ReadValue<Vector2>() == Vector2.zero)
@@ -81,6 +81,12 @@ public class PlayerMovement : MonoBehaviour
             WalkDir = Vector2.down;
             idlingcycle();
         }
+    }
+
+    void adjustAniDir() {
+        int i = (int) (-Vector2.SignedAngle(Vector2.up, WalkDir) + 180) / 90;
+        if (i == 0) i = 4;
+        ani.SetInteger("Dir", i);
     }
 
     bool CheckDir(Vector2 dir, float l)
