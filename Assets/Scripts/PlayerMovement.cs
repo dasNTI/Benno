@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         {
             ani.SetInteger("Dir", 0);
             WalkDir = Vector2.down;
-            idlingcycle();
+            //idlingcycle();
         }
     }
 
@@ -149,19 +149,12 @@ public class PlayerMovement : MonoBehaviour
         if (idling) return;
         idling = true;
 
-        void blink() {
-            GameObject EyeCover = transform.Find("EyeCover").gameObject;
-            Animator ani = EyeCover.GetComponent<Animator>();
-
-            ani.SetBool("Blink", true);
-        }
-
         IEnumerator cycle()
         {
             while (idling) {
                 if (!idling) yield break;
 
-                blink();
+                //blink();
 
                 yield return new WaitForSeconds(UnityEngine.Random.Range(1, 1));
             }
