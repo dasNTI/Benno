@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5314995191179902558}
   - component: {fileID: 5314995191179902559}
   - component: {fileID: 7070622119570937175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -105,10 +105,10 @@ MonoBehaviour:
   zOffset: 0
   lmH:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   lmV:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
 --- !u!61 &5314995191179902558
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class MusicSystem : MonoBehaviour
     private static string currentTrack;
     private static bool playing;
     private static AudioClip[] tracklist;
-    public Texture2D test;
+    public AudioMixerGroup mixertrack;
     void Start()
     {
         startTrack("Suspicious2");
@@ -33,6 +33,7 @@ public class MusicSystem : MonoBehaviour
         audio.clip = track;
         audio.maxDistance = 0;
         audio.loop = true;
+        audio.outputAudioMixerGroup = mixertrack;
         //audio.outputAudioMixerGroup = Resources.Load<AudioMixer>("Mixer.mixer").FindMatchingGroups("Master")[0];
 
         if (fadeDur != 0) {

@@ -51,7 +51,7 @@ public class PauseMenu : MonoBehaviour
 
                 initialPlayerFree = Player.free;
                 Player.free = false;
-                GameObject.Find("MusicSystem").GetComponent<MusicSystem>().pauseMusic(.25f);
+                //GameObject.Find("MusicSystem").GetComponent<MusicSystem>().pauseMusic();
 
                 GetComponent<RawImage>().color = new Color(0, 0, 0, .75f);
                 MainTab.SetActive(true);
@@ -69,7 +69,7 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 1;
 
                 Player.free = initialPlayerFree;
-                GameObject.Find("MusicSystem").GetComponent<MusicSystem>().resumeMusic();
+                //GameObject.Find("MusicSystem").GetComponent<MusicSystem>().resumeMusic();
 
                 GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
                 MainTab.SetActive(false);
