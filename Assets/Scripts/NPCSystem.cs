@@ -27,8 +27,30 @@ public class NPCSystem : MonoBehaviour
     void newNPC(string name) {
         GameObject npc = new GameObject(name);
         npc.layer = 7;
-        npc.transform.position = new Vector2(-55, 29) + new Vector2(Random.Range(-5, 5), Random.Range(-2, 2));
         npc.transform.localScale = Vector3.one * 10;
+        npc.transform.position = new Vector2(-55, 29);
+
+        bool resetposition = false;
+        int tries = 0;
+        Vector2 position = transform.position;
+        do {
+            float nodeSize = AstarPath.active.data.gridGraph.nodeSize;
+
+            position = AstarPath.active.data.gridGraph.center;
+
+            float xoffset = Random.Range(-AstarPath.active.data.gridGraph.width * nodeSize / 2f, AstarPath.active.data.gridGraph.width * nodeSize / 2f);
+
+            float yoffset = Random.Range(-AstarPath.active.data.gridGraph.depth * nodeSize / 2f, AstarPath.active.data.gridGraph.depth * nodeSize / 2f);
+
+            //position += new Vector2(xoffset, yoffset);
+
+            bool possible = AstarPath.active.data.graphs[0].GetNearest(position).node.Flags % 2 == 1;
+            Debug.Log(AstarPath.active.data.graphs[0].GetNearest(position).node.Flags);
+            //resetposition = !possible;
+
+            tries++;
+        } while (!(!resetposition || tries >= 5));
+        transform.position = position;
 
         BoxCollider2D bc = npc.AddComponent<BoxCollider2D>();
         Seeker seeker = npc.AddComponent<Seeker>();

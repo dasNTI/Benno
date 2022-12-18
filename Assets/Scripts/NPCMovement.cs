@@ -14,6 +14,7 @@ public class NPCMovement : MonoBehaviour
 
     private Vector2 aniDir = Vector2.left;
     private bool animating = true;
+    private Vector2 pos;
 
     private Path path;
     private int currentWayPoint;
@@ -26,10 +27,11 @@ public class NPCMovement : MonoBehaviour
         sprites = Resources.LoadAll<Sprite>("NPCs/" + spriteMap.name);
 
         sr.sprite = sprites[0];
+        pos = transform.position;
 
         StartCoroutine(walkAni());
 
-        seeker.StartPath(transform.position, new Vector3(-85.2f + Random.Range(-2, 2), 32.5f + Random.Range(-2, 2), 32.5f), p => {
+        seeker.StartPath(transform.position, new Vector3(-85.2f, 32.5f), p => {
             if (!p.error) {
                 path = p;
                 currentWayPoint = 0;
@@ -46,9 +48,16 @@ public class NPCMovement : MonoBehaviour
 
 
         Vector2 dir = (Vector2) (path.vectorPath[currentWayPoint] - transform.position).normalized;
-        transform.position +=  walkingSpeed * (Vector3) dir;
+        transform.position += walkingSpeed * (Vector3) dir;
 
-        if (Vector2.Distance(transform.position, path.vectorPath[currentWayPoint]) < nextWayPointDistance) currentWayPoint++;
+        float i = (-Vector2.SignedAngle(Vector2.up, dir) + 180) / 90;
+        i = Mathf.Round(i);
+        aniDir = (new Vector2(
+                Mathf.Round(Mathf.Cos(i * Mathf.PI)),
+                Mathf.Round(Mathf.Sin(i * Mathf.PI))
+            )).normalized;
+
+        if (Vector2.Distance(transform.position, (Vector2) path.vectorPath[currentWayPoint]) < nextWayPointDistance) currentWayPoint++;
     }
 
     IEnumerator walkAni() {
@@ -62,14 +71,14 @@ public class NPCMovement : MonoBehaviour
             }
 
             int dirIndex = 0;
-            switch ((int) (-Vector2.SignedAngle(Vector2.up, aniDir) + 180) / 90) {
-                case 2:
+            switch ($"{aniDir.x},{aniDir.y}") {
+                case "0,1":
                     dirIndex = 3;
                     break;
-                case 3:
+                case "1,0":
                     dirIndex = 2;
                     break;
-                case 1:
+                case "-1,0":
                     dirIndex = 1;
                     break;
             }
