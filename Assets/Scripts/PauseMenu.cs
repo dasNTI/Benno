@@ -62,9 +62,8 @@ public class PauseMenu : MonoBehaviour
             }
             return; 
         }
-        if (active && currentTab == "Main") {
-            try
-            {
+        if (active ) switch (currentTab) {
+            case "Main":
                 active = false;
                 Time.timeScale = 1;
 
@@ -73,12 +72,11 @@ public class PauseMenu : MonoBehaviour
 
                 GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
                 MainTab.SetActive(false);
-            } catch (System.Exception)
-            {
-                
-                throw;
-            }
-            return;
+            break;
+
+            case "Settings":
+
+            break;
         }
     }
 

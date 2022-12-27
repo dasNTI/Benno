@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         ani.SetInteger("Dir", i);
     }
 
-    bool CheckDir(Vector2 dir, float l)
+    public bool CheckDir(Vector2 dir, float l)
     {
 
         bool b = true;

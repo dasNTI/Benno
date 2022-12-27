@@ -9,13 +9,19 @@ public class StairMovementTrigger : MonoBehaviour
     private InputMaster Master;
     private bool entered = false;
 
+    private PlayerMovement pm;
+    private BoxCollider2D pbc;
+
     public float ratio;
     public bool adjustZ = true;
+    public int resetZOffset = 0;
 
     void Start()
     {
         bc = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Player");
+        pm = player.GetComponent<PlayerMovement>();
+        pbc = player.GetComponent<BoxCollider2D>();
         Master = new InputMaster();
         Master.Enable();
     }
@@ -32,40 +38,17 @@ public class StairMovementTrigger : MonoBehaviour
         if (!entered) return;
         //Debug.Log("yeet");
 
-        float dir = Master.MainInput.Dir.ReadValue<Vector2>().x * player.GetComponent<PlayerMovement>().walkSpeed * ratio;
+        float x = Master.MainInput.Dir.ReadValue<Vector2>().x;
+        float dir = x * player.GetComponent<PlayerMovement>().walkSpeed * ratio;
 
         //if (!CheckDir(Vector2.up * Mathf.Sign(dir), player.GetComponent<BoxCollider2D>().bounds.extents.x * 1.77f)) return;
 
-        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + dir, player.transform.position.z);
-        if (adjustZ) player.GetComponent<PlayerMovement>().zOffset -= dir;
-    }
-
-    bool CheckDir(Vector2 dir, float l)
-    {
-
-        bool b = true;
-        float o = 0.05f + player.GetComponent<PlayerMovement>().walkSpeed;
-        dir = dir.normalized * (1 + o);
-        Vector2 tdp = new Vector2(player.GetComponent<BoxCollider2D>().bounds.center.x, player.GetComponent<BoxCollider2D>().bounds.center.y);
-
-        if (dir.x == 0)
-        {
-            RaycastHit2D ray = Physics2D.Raycast(tdp + dir * player.GetComponent<BoxCollider2D>().bounds.extents.y + Vector2.left * l / 2, Vector2.right, l, player.GetComponent<PlayerMovement>().lmH);
-
-            Debug.DrawRay(tdp + dir * player.GetComponent<BoxCollider2D>().bounds.extents.y + Vector2.left * l / 2, Vector2.right * l, Color.green);
-
-            if (ray.collider != null) b = false;
-        }
-        else
-        {
-            RaycastHit2D ray = Physics2D.Raycast(tdp + dir * player.GetComponent<BoxCollider2D>().bounds.extents.x + Vector2.up * l / 2, Vector2.down, l, player.GetComponent<PlayerMovement>().lmV);
-
-            Debug.DrawRay(tdp + dir * player.GetComponent<BoxCollider2D>().bounds.extents.x + Vector2.up * l / 2, Vector2.down * l, Color.green);
-
-            if (ray.collider != null) b = false;
+        if (pm.CheckDir(Vector2.right * x, 1.55f * pbc.bounds.extents.y) && pm.CheckDir((Vector2.up * dir).normalized, 1.7f * pbc.bounds.extents.x)) {
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + dir, player.transform.position.z);
+            if (adjustZ) pm.zOffset -= dir;
         }
 
-        return b;
+        Debug.Log(pm.CheckDir(Vector2.right * x, 1.55f * pbc.bounds.extents.y));
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -74,5 +57,12 @@ public class StairMovementTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other) {
         entered = false;
+
+        if (resetZOffset == 0) return;
+
+        float xdif = player.transform.position.x - transform.position.x;
+
+        if (xdif < 0 && resetZOffset < 0) pm.zOffset = 0;
+        if (xdif > 0 && resetZOffset > 0) pm.zOffset = 0;
     }
 }
