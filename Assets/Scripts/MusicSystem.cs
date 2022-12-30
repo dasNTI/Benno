@@ -13,7 +13,7 @@ public class MusicSystem : MonoBehaviour
     public AudioMixerGroup mixertrack;
     void Start()
     {
-        startTrack("Suspicious2");
+        startTrack("MainMenuTheme");
         if (!GameObject.Find("music_" + currentTrack)) startTrack(currentTrack);
     }
 
