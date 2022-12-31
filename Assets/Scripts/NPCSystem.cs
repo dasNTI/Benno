@@ -45,7 +45,6 @@ public class NPCSystem : MonoBehaviour
             //position += new Vector2(xoffset, yoffset);
 
             bool possible = AstarPath.active.data.graphs[0].GetNearest(position).node.Flags % 2 == 1;
-            Debug.Log(AstarPath.active.data.graphs[0].GetNearest(position).node.Flags);
             //resetposition = !possible;
 
             tries++;
@@ -61,6 +60,6 @@ public class NPCSystem : MonoBehaviour
         bc.size = new Vector2(0.12f, 0.05f);
 
         npcm.spriteMap = sheets[Random.Range(0, sheets.Length)];
-        npcm.walkingSpeed = maxWalkingSpeed + Random.Range(-0.25f, 0.25f);
+        npcm.walkingSpeed = maxWalkingSpeed + Random.Range(0, 0.2f);
     }
 }

@@ -21,10 +21,11 @@ public class NPCMovement : MonoBehaviour
     private float nextWayPointDistance = .6f;
     void Start()
     {
+
         seeker = GetComponent<Seeker>();
         sr = GetComponent<SpriteRenderer>();
 
-        sprites = Resources.LoadAll<Sprite>("NPCs/" + spriteMap.name);
+        parseSpriteMap();
 
         sr.sprite = sprites[0];
         pos = transform.position;
@@ -47,17 +48,43 @@ public class NPCMovement : MonoBehaviour
         if (path == null || currentWayPoint >= path.vectorPath.Count) return;
 
 
-        Vector2 dir = (Vector2) (path.vectorPath[currentWayPoint] - transform.position).normalized;
-        transform.position += walkingSpeed * (Vector3) dir;
+        Vector2 dir = (Vector2) (path.vectorPath[currentWayPoint] - transform.position);
+        dir = normalize(dir);
+        transform.position += walkingSpeed * (Vector3) dir * Time.timeScale / 10f;
 
-        float i = (-Vector2.SignedAngle(Vector2.up, dir) + 180) / 90;
-        i = Mathf.Round(i);
-        aniDir = (new Vector2(
-                Mathf.Round(Mathf.Cos(i * Mathf.PI)),
-                Mathf.Round(Mathf.Sin(i * Mathf.PI))
-            )).normalized;
+        int r(float z) {
+            float threshold = 0.7f;
+
+            return (Mathf.Abs(z) > threshold) ? (int)Mathf.Sign(z) : 0;
+        };
+
+        aniDir = new Vector2(
+                r(dir.x),
+                -r(dir.y)
+            );
 
         if (Vector2.Distance(transform.position, (Vector2) path.vectorPath[currentWayPoint]) < nextWayPointDistance) currentWayPoint++;
+    }
+
+    Vector2 normalize(Vector2 v) {
+        float factor = 1 / v.magnitude;
+
+        return new Vector2(v.x * factor, v.y * factor);
+    }
+
+    void parseSpriteMap() {
+        int width = 12;
+        int height = 36;
+
+        sprites = new Sprite[12];
+
+        for (int i = 0; i < 12; i++) {
+            int xoffset = (i % 3) * width;
+            int yoffeset = Mathf.FloorToInt(i / 3) * height;
+
+            sprites.SetValue(Sprite.Create(spriteMap, new Rect(xoffset, yoffeset, width, height), new Vector2(0.5f, 0.5f)), i);
+            Debug.Log(sprites[i]);
+        }
     }
 
     IEnumerator walkAni() {
@@ -76,10 +103,10 @@ public class NPCMovement : MonoBehaviour
                     dirIndex = 3;
                     break;
                 case "1,0":
-                    dirIndex = 2;
+                    dirIndex = 1;
                     break;
                 case "-1,0":
-                    dirIndex = 1;
+                    dirIndex = 2;
                     break;
             }
 
@@ -98,4 +125,5 @@ public class NPCMovement : MonoBehaviour
             if (!animating) yield return new WaitWhile(() => !animating);
         }
     }
+
 }
