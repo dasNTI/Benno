@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 320171935}
   m_Layer: 3
   m_Name: Square (8)
-  m_TagString: Untagged
+  m_TagString: DiagonalWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10562,7 +10562,7 @@ GameObject:
   - component: {fileID: 2140507616}
   m_Layer: 6
   m_Name: Square (7)
-  m_TagString: Untagged
+  m_TagString: DiagonalWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10889,6 +10889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 43242292987193158, guid: e9961b4b066e01043a04f241a18c77ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.175
+      objectReference: {fileID: 0}
     - target: {fileID: 5314995191179902554, guid: e9961b4b066e01043a04f241a18c77ba, type: 3}
       propertyPath: m_Name
       value: Player

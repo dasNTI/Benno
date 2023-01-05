@@ -119,7 +119,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""name"": ""Gp"",
                     ""id"": ""d1bfc459-4bd0-449d-ad05-7d4bb113746c"",
                     ""path"": ""2DVector"",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.2,pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Dir"",
@@ -226,6 +226,61 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""Gp2"",
+                    ""id"": ""b08a37db-eef1-4e8d-8540-e8874f5493a6"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dir"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c616d503-498b-4f91-966d-d3a4a3a16b82"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f368666f-1e3f-4cd0-8119-bc502d7ffecc"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""10eff990-7e4f-43b5-ad36-d37bd345d029"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""a95ed5b0-db17-43c6-bd4c-63e016685e21"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""c4fd148c-a567-4ab6-b05a-0019388a5593"",
                     ""path"": ""<Keyboard>/f"",
@@ -283,7 +338,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2e0a7e3a-b1a3-4815-8eaa-145f8ff84f22"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

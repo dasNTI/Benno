@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask lmH;
     public LayerMask lmV;
     private static Vector2 WalkDir;
+    private BoxCollider2D diagonalWallCollider;
     private bool idling = true;
     private static string prevScene = "";
     
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         ani = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        WalkDir = Vector2.zero;
+        if (WalkDir.magnitude != 1) WalkDir = Vector2.down;
 
         InitializePosition();
         ani.StartPlayback();
@@ -104,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawRay(tdp + dir * bc.bounds.extents.y + Vector2.left * l / 2, Vector2.right * l, Color.green);
 
             if (ray.collider != null) b = false;
+            if (ray.collider != null && ray.collider.gameObject.tag == "DiagonalWall") handleDiagonalWall((BoxCollider2D) ray.collider);
         }else
         {
             RaycastHit2D ray = Physics2D.Raycast(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down, l, lmV);
@@ -111,9 +113,29 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawRay(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down * l, Color.green);
 
             if (ray.collider != null) b = false;
+            if (ray.collider != null && ray.collider.gameObject.tag == "DiagonalWall") handleDiagonalWall((BoxCollider2D) ray.collider);
         }
 
         return b;
+    }
+
+    void handleDiagonalWall(BoxCollider2D collider) {
+        diagonalWallCollider = collider;
+        float rotation = collider.gameObject.transform.rotation.eulerAngles.z;
+            rotation = (rotation % 180f) - 180 * Mathf.Floor(rotation / 180);
+        Vector2 mov = Master.MainInput.Dir.ReadValue<Vector2>();
+
+        //if (xmov != 0 && ymov != 0) return;
+
+        float f(float x) {
+            //return Mathf.Sqrt(1 - Mathf.Pow(2 * x - 1, 2));
+            return Mathf.Sin(Mathf.PI * x);
+        }
+
+        float xf = f(Mathf.Abs(rotation) / 90f) * mov.y * Mathf.Sign(rotation);
+        float yf = f(Mathf.Abs(rotation) / 90f) * mov.x * Mathf.Sign(rotation);
+
+        transform.position = new Vector3(transform.position.x + xf * walkSpeed * xf, transform.position.y +  yf * walkSpeed, transform.position.z);
     }
 
     void checkOtherSides(float l)

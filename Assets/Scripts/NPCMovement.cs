@@ -83,7 +83,6 @@ public class NPCMovement : MonoBehaviour
             int yoffeset = Mathf.FloorToInt(i / 3) * height;
 
             sprites.SetValue(Sprite.Create(spriteMap, new Rect(xoffset, yoffeset, width, height), new Vector2(0.5f, 0.5f)), i);
-            Debug.Log(sprites[i]);
         }
     }
 
