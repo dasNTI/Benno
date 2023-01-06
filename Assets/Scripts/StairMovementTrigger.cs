@@ -14,7 +14,10 @@ public class StairMovementTrigger : MonoBehaviour
 
     public float ratio;
     public bool adjustZ = true;
+    public bool checkVertical = true;
     public int resetZOffset = 0;
+    public float leftZOffset = 0;
+    public float rightZOffset = 0;
 
     void Start()
     {
@@ -43,7 +46,10 @@ public class StairMovementTrigger : MonoBehaviour
 
         //if (!CheckDir(Vector2.up * Mathf.Sign(dir), player.GetComponent<BoxCollider2D>().bounds.extents.x * 1.77f)) return;
 
-        if (pm.CheckDir(Vector2.right * x, 1.55f * pbc.bounds.extents.y) && pm.CheckDir((Vector2.up * dir).normalized, 1.7f * pbc.bounds.extents.x)) {
+        bool checkV = pm.CheckDir((Vector2.up * dir).normalized, 1.7f * pbc.bounds.extents.x);
+        if (!checkVertical) checkV = true;
+
+        if (pm.CheckDir(Vector2.right * x, 1.55f * pbc.bounds.extents.y) && checkV) {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + dir, player.transform.position.z);
             if (adjustZ) pm.zOffset -= dir;
         }
@@ -58,11 +64,11 @@ public class StairMovementTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         entered = false;
 
-        if (resetZOffset == 0) return;
+        if (resetZOffset == 0 || !adjustZ) return;
 
         float xdif = player.transform.position.x - transform.position.x;
 
-        if (xdif < 0 && resetZOffset < 0) pm.zOffset = 0;
-        if (xdif > 0 && resetZOffset > 0) pm.zOffset = 0;
+        if (xdif < 0) pm.zOffset = leftZOffset;
+        if (xdif > 0) pm.zOffset = rightZOffset;
     }
 }

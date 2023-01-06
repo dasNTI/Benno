@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Classroom.unity
+    guid: 7132e4b068cfdb948a74da0343727304
+  - enabled: 1
     path: Assets/Scenes/ScienceHallway.unity
     guid: edcbbb2d2b89998489925c7c1e861c14
   - enabled: 1
@@ -38,8 +41,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeacherFoyer.unity
     guid: 89d75b843735b6e4c9e40c0a377221ae
-  - enabled: 1
-    path: Assets/Scenes/Classroom.unity
-    guid: 7132e4b068cfdb948a74da0343727304
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 95d292807918ea247b3b1e948b7fc39d, type: 2}
