@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ClassroomFilled.unity
+    guid: aec6b46be0a1fb742a012010dea2b9d6
+  - enabled: 1
     path: Assets/Scenes/Classroom.unity
     guid: 7132e4b068cfdb948a74da0343727304
   - enabled: 1
