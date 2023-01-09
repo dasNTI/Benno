@@ -11,6 +11,8 @@ public class EyeCover : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         ani = transform.parent.gameObject.GetComponent<Animator>();
+    }
+    private void OnEnable() {
         StartCoroutine(cycle());
     }
 
@@ -41,7 +43,7 @@ public class EyeCover : MonoBehaviour
     }
 
     IEnumerator cycle() {
-        while (true) {
+        while (enabled) {
             yield return new WaitForSeconds(Random.Range(1, 9));
             for (int i = 0; i < 5; i++) {
                 transform.localScale = new Vector3(1, Mathf.Pow(Mathf.Sin(i * Mathf.PI / 4f), 2), 1);
