@@ -3804,6 +3804,7 @@ MonoBehaviour:
   LowerRightLimit: {x: 3, y: 3.5}
   distance: 25
   follow: 1
+  walkBounce: 1
 --- !u!1 &524664095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,7 +5069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647824968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: 12.6, z: 13.46}
+  m_LocalPosition: {x: 6, y: 12.55, z: 13.46}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1394785896}
@@ -10053,11 +10054,19 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6926909146165233067, guid: 32ec748fefe825b48a427c9070c781d8, type: 3}
+    - target: {fileID: 6926909147335356631, guid: 32ec748fefe825b48a427c9070c781d8, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6926909147335356631, guid: 32ec748fefe825b48a427c9070c781d8, type: 3}
+    - target: {fileID: 6926909147547528779, guid: 32ec748fefe825b48a427c9070c781d8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926909147547528779, guid: 32ec748fefe825b48a427c9070c781d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926909147547528779, guid: 32ec748fefe825b48a427c9070c781d8, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
@@ -13088,7 +13097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586847078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.4, y: 4.1, z: 4.1}
+  m_LocalPosition: {x: -26.4, y: 4.1, z: 4.2}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

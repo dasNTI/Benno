@@ -9,6 +9,8 @@ public class Speech : MonoBehaviour
     private GameObject Monologue;
     private TMPro.TextMeshProUGUI MonologueText;
     private GameObject MonologueOptions;
+    private CameraMovement cm;
+    private PlayerMovement pm;
     public TMPro.TMP_FontAsset Font;
     public AudioClip OptionSelect;
     public AudioClip OptionClick;
@@ -60,30 +62,40 @@ public class Speech : MonoBehaviour
         Monologue = GameObject.Find("Monologue");
         MonologueText = GameObject.Find("MonologueText").GetComponent<TMPro.TextMeshProUGUI>();
         MonologueOptions = GameObject.Find("MonologueOptions");
+
         float mheight = 0.325f;
         float mmargin = 0.0013f;
         float fheight = 0.035f;
         Monologue.GetComponent<RectTransform>().sizeDelta = new Vector2(Monologue.GetComponent<RectTransform>().sizeDelta.x, Screen.height * mheight);
         Monologue.SetActive(false);
+
         MonologueText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(30, 20) * mmargin * Screen.height;
         MonologueText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-30, -20) * mmargin * Screen.height;
         MonologueText.fontSize = Screen.height * fheight;
+
         MonologueOptions.GetComponent<RectTransform>().offsetMin = new Vector2(30, 20) * mmargin * Screen.height;
         MonologueOptions.GetComponent<RectTransform>().offsetMax = new Vector2(-30, -120) * mmargin * Screen.height;
 
-        /*StartMonologue(new Line[] { 
-            new Line("Klappt's?", 1, 1) 
-        }, new Option[] {
-            new Option("Ja", () => {Debug.Log("Toll"); }),
-            new Option("Nein", () => {Debug.Log("Scheise"); })
-        });*/
+        cm = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+
+        IEnumerator d() {
+            yield return new WaitForSeconds(1);
+            StartMonologue(new Line[] { 
+                new Line("Klappt's?", 1, 1) 
+            }, new Option[] {
+                new Option("Ja", () => {Debug.Log("Toll"); }),
+            });
+        };
+        //StartCoroutine(d());
     }
 
     public void StartMonologue(Line[] Lines, Option[] Options = null, bool free = false, Action onfinish = null)
     {
-        initfreestate = GameObject.Find("Player").GetComponent<PlayerMovement>().free;
-        if (!free) GameObject.Find("Player").GetComponent<PlayerMovement>().free = false;
+        initfreestate = pm.free;
+        if (!free) pm.free = false;
         Monologue.SetActive(true);
+        cm.walkBounce = pm.free;
 
 
         IEnumerator d()
@@ -116,9 +128,10 @@ public class Speech : MonoBehaviour
 
             if (Options != null)
             {
-                float w = Mathf.Abs(MonologueOptions.GetComponent<RectTransform>().rect.width / (float)Options.Length);
-                float h = Mathf.Abs(MonologueOptions.GetComponent<RectTransform>().rect.height);
-                float fontsize = 0.035f;
+                RectTransform mort = MonologueOptions.GetComponent<RectTransform>();
+                float w = Mathf.Abs(mort.rect.width / (float)Options.Length);
+                float h = Mathf.Abs(mort.GetComponent<RectTransform>().rect.height);
+                float fontsize = 0.045f;
 
                 SelectedOption = 0;
                 CurrentOptions = Options;
@@ -128,19 +141,14 @@ public class Speech : MonoBehaviour
                     GameObject option = new GameObject($"MonologueOption{i}");
 
                     RectTransform rt = option.AddComponent<RectTransform>();
-                    rt.anchorMin = Vector2.up / 2;
-                    rt.anchorMax = Vector2.up / 2;
-                    rt.pivot = Vector2.up / 2;
-                    rt.SetParent(MonologueOptions.transform);
-                    rt.anchoredPosition = Vector2.right * w * i;
-                    rt.sizeDelta = new Vector2(w, h);
-                    rt.localScale = Vector3.one;
-                    rt.position = new Vector3(rt.position.x, rt.position.y, 0.1f);
+                        rt.SetParent(MonologueOptions.transform);
+                        rt.localScale = Vector3.one;
+                        rt.position = new Vector3(0, 0, mort.position.z);
                     TMPro.TextMeshProUGUI tmp = option.AddComponent<TMPro.TextMeshProUGUI>();
-                    tmp.font = Font;
-                    tmp.fontSize = fontsize * Screen.height;
-                    tmp.alignment = TMPro.TextAlignmentOptions.Center;
-                    tmp.text = Options[i].Title;
+                        tmp.font = Font;
+                        tmp.fontSize = fontsize * Screen.height;
+                        tmp.alignment = TMPro.TextAlignmentOptions.Center;
+                        tmp.text = Options[i].Title;
                     if (i == 0) tmp.fontStyle = TMPro.FontStyles.Underline;
                 }
 
@@ -151,7 +159,8 @@ public class Speech : MonoBehaviour
 
             if (Options != null) yield break;
             Monologue.SetActive(false);
-            GameObject.Find("Player").GetComponent<PlayerMovement>().free = initfreestate;
+            pm.free = initfreestate;
+            cm.walkBounce = pm.free;
         }
         StartCoroutine(d());
     }
