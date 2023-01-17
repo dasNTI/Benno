@@ -314,6 +314,7 @@
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/CameraTransition.cs"
 "Assets/Scripts/EyeCover.cs"
+"Assets/Scripts/Inventory.cs"
 "Assets/Scripts/MusicSystem.cs"
 "Assets/Scripts/NPCMovement.cs"
 "Assets/Scripts/NPCSystem.cs"
