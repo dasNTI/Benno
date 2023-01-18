@@ -68,6 +68,6 @@ public class Inventory : MonoBehaviour
     }
 
     public void UpdateInventoryContent() {
-
+        
     }
 }
