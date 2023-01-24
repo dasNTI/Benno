@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private static Vector2 WalkDir;
     private BoxCollider2D diagonalWallCollider;
     private bool idling = true;
-    private static string prevScene = "";
+    public static string prevScene = "";
     
     void Awake()
     {
@@ -186,6 +186,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void InitializePosition()
     {
+        //IEnumerator d() {
+        //    string test = prevScene;
+        //    yield return new WaitForSeconds(1);
+        //    GameObject.Find("Speech").GetComponent<Speech>().StartMonologue(new Speech.Line[1] {
+        //        new Speech.Line(test, 1, 1)
+        //    });
+        //}
+        //StartCoroutine(d());
+
         if (prevScene.Length < 1)
         {
             prevScene = SceneManager.GetActiveScene().name;
@@ -200,21 +209,23 @@ public class PlayerMovement : MonoBehaviour
         {
             // Erdgeschoss
             case "30er":
-                positionsPlusRotations = new Vector2[5] 
+                positionsPlusRotations = new Vector2[6] 
                 {
                     new Vector2(-85.1f, 33.83f),
                     new Vector2(-61.77f, 26.79f),
                     new Vector2(-22.21f, 32.95f),
                     new Vector2(-20.14f, 27),
+                    new Vector2(-74.85f, 29.55f),
                     new Vector2(-74.85f, 29.55f)
                 };
-                possiblePrevScenes = new string[5]
+                possiblePrevScenes = new string[6]
                 {
                     "MusicHall",
                     "MilkHall",
                     "MusicGeographyHallway",
                     "Agora",
-                    "Classroom"
+                    "Classroom",
+                    "ClassroomFilled"
                 };
                 break;
             case "Agora":
@@ -283,17 +294,19 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "MusicHall":
-                positionsPlusRotations = new Vector2[3]
+                positionsPlusRotations = new Vector2[4]
                 {
                     new Vector2(-93.96f, 52.19f),
                     new Vector2(-84.99f, 40.53f),
-                    new Vector2(-80.01f, 55.45f)
+                    new Vector2(-80.01f, 55.45f),
+                    new Vector2(-89.5f, 42.4f)
                 };
-                possiblePrevScenes = new string[3]
+                possiblePrevScenes = new string[4]
                 {
                     "Music",
                     "30er",
-                    "MusicGeographyHallway"
+                    "MusicGeographyHallway",
+                    "OldClassroom"
                 };
                 break;
             case "ScienceHallway":
@@ -321,15 +334,35 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
 
+            // 1. OG
+            case "OldClassroom":
+                positionsPlusRotations = new Vector2[1]
+                {
+                    new Vector2(-80.31f, 38.01f)
+                };
+                possiblePrevScenes = new string[1]
+                {
+                    "MusicHall"
+                };
+                break;
+
             default:
+                prevScene = SceneManager.GetActiveScene().name;
                 return;
         }
 
-        if (possiblePrevScenes == null || positionsPlusRotations == null) return;
+        try
+        {
+            if (possiblePrevScenes == null || positionsPlusRotations == null) return;
 
-        int prevSceneIndex = Array.IndexOf(possiblePrevScenes, prevScene);
+            int prevSceneIndex = Array.IndexOf(possiblePrevScenes, prevScene);
 
-        transform.position = positionsPlusRotations[prevSceneIndex];
+            transform.position = positionsPlusRotations[prevSceneIndex];
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
 
         prevScene = SceneManager.GetActiveScene().name;
     }
