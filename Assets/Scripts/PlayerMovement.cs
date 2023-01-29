@@ -229,17 +229,19 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "Agora":
-                positionsPlusRotations = new Vector2[3]
+                positionsPlusRotations = new Vector2[4]
                 {
                     new Vector2(-22.59f, 25.61f),
                     new Vector2(-26.07f, 1.44f),
-                    new Vector2(7.5f, 23.95f)
+                    new Vector2(7.5f, 23.95f),
+                    new Vector2(-25.7f, 7.09f)
                 };
-                possiblePrevScenes = new string[3]
+                possiblePrevScenes = new string[4]
                 {
                     "30er",
                     "ScienceHallway",
-                    "TeacherFoyer"
+                    "TeacherFoyer",
+                    "Library"
                 };
                 break;
             case "Classroom":
@@ -332,6 +334,10 @@ public class PlayerMovement : MonoBehaviour
                     "Geography",
                     "Agora"
                 };
+                break;
+            case "Library":
+                positionsPlusRotations = new Vector2[1] { new Vector2(-25.55f, 7) };
+                possiblePrevScenes = new string[1] { "Agora" };
                 break;
 
             // 1. OG

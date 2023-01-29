@@ -70,12 +70,19 @@ public class PauseMenu : MonoBehaviour
                 Player.free = initialPlayerFree;
                 //GameObject.Find("MusicSystem").GetComponent<MusicSystem>().resumeMusic();
 
+                GameObject.Find("PauseMenuMainTabContinue").GetComponent<TMPro.TextMeshProUGUI>().fontStyle = TMPro.FontStyles.Underline;
+                GameObject.Find("PauseMenuMainTab" + currentButton).GetComponent<TMPro.TextMeshProUGUI>().fontStyle = TMPro.FontStyles.Normal;
+
+
                 GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
                 MainTab.SetActive(false);
             break;
 
             case "Settings":
-
+                MainTab.SetActive(true);
+                SettingsTab.SetActive(false);
+                currentButton = "Settings";
+                currentTab = "Main";
             break;
         }
     }
@@ -151,6 +158,43 @@ public class PauseMenu : MonoBehaviour
                     break;
                 }
             break;
+
+            case "Settings":
+                void SelectSetting(string setting, bool selected) {
+                    Color c = selected ? new Color(255, 255, 255, 0.1f) : new Color(255, 255, 255, 0);
+                    GameObject.Find(setting).GetComponent<Image>().color = c;
+                }
+
+                switch (currentButton) {
+                    case "MasterVolume":
+                        if (dir.y > 0) {
+                            SelectSetting("PauseMenuSettingsTabAudioGeneral", false);
+                        }else if (dir.y < 0) {
+                            SelectSetting("PauseMenuSettingsTabAudioGeneral", false);
+                            SelectSetting("PauseMenuSettingsTabAudioMusic", true);
+                            currentButton = "MusicVolume";
+                        }
+                    break;
+                    case "MusicVolume":
+                        if (dir.y > 0) {
+                            SelectSetting("PauseMenuSettingsTabAudioGeneral", true);
+                            SelectSetting("PauseMenuSettingsTabAudioMusic", false);
+                            currentButton = "MasterVolume";
+                        }else if (dir.y < 0) {
+                            SelectSetting("PauseMenuSettingsTabAudioMusic", false);
+                            SelectSetting("PauseMenuSettingsTabAudioSounds", true);
+                            currentButton = "SoundsVolume";
+                        }
+                    break;
+                    case "SoundsVolume":
+                        if (dir.y > 0) {
+                            SelectSetting("PauseMenuSettingsTabAudioMusic", true);
+                            SelectSetting("PauseMenuSettingsTabAudioSounds", false);
+                            currentButton = "MusicVolume";
+                        }
+                    break;
+                }
+            break;
         }
 
         if (sound) return;
@@ -175,6 +219,9 @@ public class PauseMenu : MonoBehaviour
                         SettingsTab.SetActive(true);
                         MainTab.SetActive(false);
                         currentTab = "Settings";
+                        currentButton = "MasterVolume";
+                        GameObject.Find("PauseMenuSettingsTabAudioGeneral")
+                            .GetComponent<Image>().color = new Color(255, 255, 255, 0.1f);
                     break;
                     case "Controls":
 
@@ -184,6 +231,32 @@ public class PauseMenu : MonoBehaviour
                     break;
                     case "Leave":
 
+                    break;
+                }
+            break;
+
+            case "Settings":
+                switch (currentButton) {
+                    case "MasterVolume":
+                        currentButton = "MasterVolumeSlider";
+                        GameObject.Find("PauseMenuSettingsTabAudioGeneralSlider").GetComponent<UIVolumeSlider>().Select();
+                    break;
+                    case "MasterVolumeSlider":
+                        currentButton = "MasterVolume";
+                    break;
+                    case "MusicVolume":
+                        currentButton = "MusicVolumeSlider";
+                        GameObject.Find("PauseMenuSettingsTabAudioMusicSlider").GetComponent<UIVolumeSlider>().Select();
+                    break;
+                    case "MusicVolumeSlider":
+                        currentButton = "MusicVolume";
+                    break;
+                    case "SoundsVolume":
+                        currentButton = "SoundsVolumeSlider";
+                        GameObject.Find("PauseMenuSettingsTabAudioSoundsSlider").GetComponent<UIVolumeSlider>().Select();
+                    break;
+                    case "SoundsVolumeSlider":
+                        currentButton = "SoundsVolume";
                     break;
                 }
             break;

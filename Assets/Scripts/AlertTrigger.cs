@@ -13,7 +13,7 @@ public class AlertTrigger : MonoBehaviour
     public string EnterScene;
 
     private int ID;
-    public Action AlertCallback; 
+    public Action AlertCallback;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

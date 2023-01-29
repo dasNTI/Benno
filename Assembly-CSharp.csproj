@@ -51,9 +51,10 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\WallFade.cs" />
      <Compile Include="Assets\Scripts\NPCSystem.cs" />
-     <Compile Include="Assets\Scripts\UIScaling.cs" />
+     <Compile Include="Assets\Scripts\UI\UIScaling.cs" />
      <Compile Include="Assets\Packages\InputMaster.cs" />
      <Compile Include="Assets\Scripts\Speech.cs" />
+     <Compile Include="Assets\Scripts\UI\UIVolumeSlider.cs" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

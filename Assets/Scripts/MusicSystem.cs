@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.Audio;
 using DG.Tweening;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class MusicSystem : MonoBehaviour
 {
@@ -11,9 +13,15 @@ public class MusicSystem : MonoBehaviour
     private static bool playing;
     private static AudioClip[] tracklist;
     public AudioMixerGroup mixertrack;
+    public bool InitializeMixer = false;
+
+    private void Awake() {
+        
+    }
     void Start()
     {
         startTrack("Suspicious2");
+        if (InitializeMixer) InitMixer();
         if (!GameObject.Find("music_" + currentTrack)) startTrack(currentTrack);
     }
 
@@ -64,4 +72,51 @@ public class MusicSystem : MonoBehaviour
         audio.volume = 1;
         audio.Play();
     }
+
+    private void InitMixer() {
+        Debug.Log("Yeet");
+
+        if (!File.Exists(Application.persistentDataPath + "/Settings/AudioSettings.json")) {
+            SaveMixer();
+            return;
+        }
+
+        FileStream Stream = new FileStream(Application.persistentDataPath + "/Settings/AudioSettings.json", FileMode.Open);
+        BinaryFormatter Formatter = new BinaryFormatter();
+        AudioMixer Mixer = mixertrack.audioMixer;
+
+        string Json = Formatter.Deserialize(Stream) as string;
+        Stream.Close();
+
+        MixerParams Params = JsonUtility.FromJson<MixerParams>(Json);
+
+        Mixer.SetFloat("MasterVol", Params.MasterVol);
+        Mixer.SetFloat("MusicVol", Params.MusicVol);
+        Mixer.SetFloat("SoundsVol", Params.SoundsVol);
+    }
+
+    public void SaveMixer() {
+        AudioMixer mixer = mixertrack.audioMixer;
+
+        MixerParams Params = new MixerParams();
+
+        mixer.GetFloat("MasterVol", out Params.MasterVol);
+        mixer.GetFloat("MusicVol", out Params.MusicVol);
+        mixer.GetFloat("SoundsVol", out Params.SoundsVol);
+
+        if (!Directory.Exists(Application.persistentDataPath + "/Settings"))
+            Directory.CreateDirectory(Application.persistentDataPath + "/Settings");
+        FileStream Stream = new FileStream(Application.persistentDataPath + "/Settings/AudioSettings.json", FileMode.Create);
+
+        BinaryFormatter Formatter = new BinaryFormatter();
+
+        Formatter.Serialize(Stream, JsonUtility.ToJson(Params));
+        Stream.Close();
+    }
+}
+
+class MixerParams {
+    public float MasterVol;
+    public float MusicVol;
+    public float SoundsVol;
 }

@@ -380,7 +380,8 @@
 "Assets/Scripts/SceneTrigger.cs"
 "Assets/Scripts/Speech.cs"
 "Assets/Scripts/StairMovementTrigger.cs"
-"Assets/Scripts/UIScaling.cs"
+"Assets/Scripts/UI/UIScaling.cs"
+"Assets/Scripts/UI/UIVolumeSlider.cs"
 "Assets/Scripts/WallFade.cs"
 -langversion:8.0
 

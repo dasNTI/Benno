@@ -7,9 +7,12 @@ public class EyeCover : MonoBehaviour
     private SpriteRenderer sr;
     private Animator ani;
     public Sprite[] sprites;
+    public bool NpcMode = true;
+    public bool active;
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        if (NpcMode) return;
         ani = transform.parent.gameObject.GetComponent<Animator>();
     }
     private void OnEnable() {
@@ -19,6 +22,7 @@ public class EyeCover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (NpcMode) return;
         switch (ani.GetInteger("Dir")) {
             case 0:
                 sr.color = new Color(255, 255, 255, 1);
@@ -47,8 +51,9 @@ public class EyeCover : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(1, 9));
             for (int i = 0; i < 5; i++) {
                 transform.localScale = new Vector3(1, Mathf.Pow(Mathf.Sin(i * Mathf.PI / 4f), 2), 1);
-                yield return new WaitForSeconds(0.1f);
+                if (active) yield return new WaitForSeconds(0.1f);
             }
+            if (!active) yield return new WaitWhile(() => !active);
         }
     }
 }
