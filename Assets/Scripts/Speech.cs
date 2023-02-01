@@ -82,20 +82,20 @@ public class Speech : MonoBehaviour
         MonologueText.gameObject.SetActive(false);
         MonologueOptions.gameObject.SetActive(false);
 
-        IEnumerator d() {
-            yield return new WaitForSeconds(1);
-            StartMonologue(new Line[] { 
-                new Line("Klappt's?", 1, 1) 
-            }, new Option[] {
-                new Option("Ja", () => {Debug.Log("Toll"); }),
-            });
-        };
-        StartCoroutine(d());
+        //IEnumerator d() {
+        //    yield return new WaitForSeconds(1);
+        //    StartMonologue(new Line[] { 
+        //        new Line("Klappt's?", 1, 1) 
+        //    }, new Option[] {
+        //        new Option("Ja", () => {Debug.Log("Toll"); }),
+        //    });
+        //};
+        //StartCoroutine(d());
     }
 
     public void StartMonologue(Line[] Lines, Option[] Options = null, bool free = false, Action onfinish = null)
     {
-        Debug.Log("Yeeet");
+        //Debug.Log("Yeeet");
         initfreestate = pm.free;
         if (!free) pm.free = false;
         Monologue.GetComponent<RawImage>().color = new Color(255, 255, 255, 1);

@@ -8,14 +8,18 @@ public class Pencil : MonoBehaviour
     public RawImage Paper;
     public Color Tint;
     public Image Background;
+    public float ReducedSpeed;
 
     private InputMaster Master;
     private RectTransform rt;
     private RectTransform BackgroundRt;
+    private UIPlayerMovement uipm;
+
     private Texture2D Drawing;
     private Color[,] Pixels;
     public bool active;
     private float GridFactor;
+    private float OriginalSpeed;
     private Vector2 UpperLeftPaperLimit;
     private Vector2 LowerRightPaperLimit;
     void Start()
@@ -23,7 +27,9 @@ public class Pencil : MonoBehaviour
         Master = new InputMaster();
         rt = GetComponent<RectTransform>();
         BackgroundRt = Background.GetComponent<RectTransform>();
+        uipm = GetComponent<UIPlayerMovement>();
         GridFactor = Screen.height / 150f;
+        OriginalSpeed = uipm.Speed;
 
         UpperLeftPaperLimit = new Vector2(
             BackgroundRt.offsetMin.x,
@@ -36,11 +42,12 @@ public class Pencil : MonoBehaviour
 
         Master.MainInput.Click.performed += _ => {
             active = !active;
+            if (active) uipm.Speed = ReducedSpeed;
+            if (!active) uipm.Speed = OriginalSpeed;
         };
         Master.MainInput.Enter.performed += _ => {
             Setup();
         };
-
         Master.Enable();
 
         Setup();
@@ -77,20 +84,14 @@ public class Pencil : MonoBehaviour
             UpperLeftPaperLimit.y + Background.sprite.texture.height
         );
 
-
         Vector2 PaperPosition = new Vector2(GridPosition.x, -GridPosition.y) - UpperLeftPaperLimit;
-        //if (GridPosition.x < UpperLeftPaperLimit.x || GridPosition.x > LowerRightPaperLimit.x) return;
-        //if (GridPosition.y < UpperLeftPaperLimit.y || GridPosition.y > LowerRightPaperLimit.y) return;
-
-        //Debug.Log(new Vector2((int) PaperPosition.x, (int) PaperPosition.y));
 
         SetPixel(PaperPosition.x / GridFactor, Background.sprite.texture.height - PaperPosition.y / GridFactor);
         //SetPixel(PaperPosition.x / GridFactor + 1, Background.sprite.texture.height - PaperPosition.y / GridFactor);
-        //SetPixel(PaperPosition.x / GridFactor + 1, Background.sprite.texture.height - PaperPosition.y / GridFactor + 1  );
+        //SetPixel(PaperPosition.x / GridFactor + 1, Background.sprite.texture.height - PaperPosition.y / GridFactor + 1);
         //SetPixel(PaperPosition.x / GridFactor, Background.sprite.texture.height - PaperPosition.y / GridFactor + 1);
 
         updateTexture();
-        Debug.Log(PaperPosition.x / (120 * GridFactor));
     }
 
     private void SetPixel(float x, float y) {
