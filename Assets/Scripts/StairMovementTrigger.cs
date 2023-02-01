@@ -54,7 +54,7 @@ public class StairMovementTrigger : MonoBehaviour
             if (adjustZ) pm.zOffset -= dir;
         }
 
-        Debug.Log(pm.CheckDir(Vector2.right * x, 1.55f * pbc.bounds.extents.y));
+        //Debug.Log(pm.CheckDir(Vector2.right * x, 1.55f * pbc.bounds.extents.y));
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

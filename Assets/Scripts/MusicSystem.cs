@@ -20,7 +20,7 @@ public class MusicSystem : MonoBehaviour
     }
     void Start()
     {
-        startTrack("Suspicious2");
+        startTrack("Casual2");
         if (InitializeMixer) InitMixer();
         if (!GameObject.Find("music_" + currentTrack)) startTrack(currentTrack);
     }

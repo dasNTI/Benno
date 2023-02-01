@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawRay(tdp + dir * bc.bounds.extents.y + Vector2.left * l / 2, Vector2.right * l, Color.green);
 
             if (ray.collider != null) b = false;
-            if (ray.collider != null && ray.collider.gameObject.tag == "DiagonalWall") handleDiagonalWall((BoxCollider2D) ray.collider);
+            //if (ray.collider != null && ray.collider.gameObject.tag == "DiagonalWall") handleDiagonalWall((BoxCollider2D) ray.collider);
         }else
         {
             RaycastHit2D ray = Physics2D.Raycast(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down, l, lmV);
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawRay(tdp + dir * bc.bounds.extents.x + Vector2.up * l / 2, Vector2.down * l, Color.green);
 
             if (ray.collider != null) b = false;
-            if (ray.collider != null && ray.collider.gameObject.tag == "DiagonalWall") handleDiagonalWall((BoxCollider2D) ray.collider);
+            //if (ray.collider != null && ray.collider.gameObject.tag == "DiagonalWall") handleDiagonalWall((BoxCollider2D) ray.collider);
         }
 
         return b;

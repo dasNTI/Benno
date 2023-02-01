@@ -41,9 +41,12 @@
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\EyeCover.cs" />
      <Compile Include="Assets\Scripts\MusicSystem.cs" />
+     <Compile Include="Assets\Scripts\UI\UIGridScaling.cs" />
      <Compile Include="Assets\Scripts\AlertTrigger.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPlayerMovement.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\SceneTrigger.cs" />
+     <Compile Include="Assets\Scripts\Riddles\Poetry\Pencil.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\CameraBlackBars.cs" />
      <Compile Include="Assets\Scripts\CameraTransition.cs" />

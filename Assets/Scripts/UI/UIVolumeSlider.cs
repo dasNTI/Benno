@@ -46,6 +46,8 @@ public class UIVolumeSlider : MonoBehaviour
         };
 
         Master.MainInput.Quit.performed += _ => {
+            if (!Selected) return;
+
             try
             {
                 image.sprite = UnselectedSprites[VolumeStep];
@@ -56,6 +58,8 @@ public class UIVolumeSlider : MonoBehaviour
             musicSystem.SaveMixer();
         };
         Master.MainInput.Click.performed += _ => {
+            if (!Selected) return;
+
             try
             {
                 image.sprite = UnselectedSprites[VolumeStep];
@@ -77,8 +81,15 @@ public class UIVolumeSlider : MonoBehaviour
     }
 
     public void Select() {
-        Selected = true;
+
         image.sprite = SelectedSprites[VolumeStep];
+        Debug.Log(Selected);
+        IEnumerator d() {
+            yield return new WaitForEndOfFrame();
+            Selected = true;
+        }
+
+        StartCoroutine(d());
     }
 
     float StepToVolume(int step) {
@@ -86,6 +97,7 @@ public class UIVolumeSlider : MonoBehaviour
     }
 
     int VolumeToStep(float volume) {
-        return Mathf.FloorToInt(Mathf.Pow(10, volume / 20) * 10);
+        int v = Mathf.FloorToInt(Mathf.Pow(10, volume / 20) * 10);
+        return Mathf.Min(9, Mathf.Max(0, v));
     }
 }

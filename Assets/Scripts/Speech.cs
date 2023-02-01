@@ -67,7 +67,6 @@ public class Speech : MonoBehaviour
         float mmargin = 0.0013f;
         float fheight = 0.035f;
         Monologue.GetComponent<RectTransform>().sizeDelta = new Vector2(Monologue.GetComponent<RectTransform>().sizeDelta.x, Screen.height * mheight);
-        Monologue.SetActive(false);
 
         MonologueText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(30, 20) * mmargin * Screen.height;
         MonologueText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-30, -20) * mmargin * Screen.height;
@@ -79,6 +78,10 @@ public class Speech : MonoBehaviour
         cm = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
         pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
 
+        Monologue.GetComponent<RawImage>().color = new Color(255, 255, 255, 0);
+        MonologueText.gameObject.SetActive(false);
+        MonologueOptions.gameObject.SetActive(false);
+
         IEnumerator d() {
             yield return new WaitForSeconds(1);
             StartMonologue(new Line[] { 
@@ -87,14 +90,17 @@ public class Speech : MonoBehaviour
                 new Option("Ja", () => {Debug.Log("Toll"); }),
             });
         };
-        //StartCoroutine(d());
+        StartCoroutine(d());
     }
 
     public void StartMonologue(Line[] Lines, Option[] Options = null, bool free = false, Action onfinish = null)
     {
+        Debug.Log("Yeeet");
         initfreestate = pm.free;
         if (!free) pm.free = false;
-        Monologue.SetActive(true);
+        Monologue.GetComponent<RawImage>().color = new Color(255, 255, 255, 1);
+        MonologueText.gameObject.SetActive(true);
+        MonologueOptions.gameObject.SetActive(true);
         cm.walkBounce = pm.free;
 
 
@@ -158,7 +164,9 @@ public class Speech : MonoBehaviour
             else if (onfinish != null) onfinish();
 
             if (Options != null) yield break;
-            Monologue.SetActive(false);
+            Monologue.GetComponent<RawImage>().color = new Color(255, 255, 255, 0);
+            MonologueText.gameObject.SetActive(false);
+            MonologueOptions.gameObject.SetActive(false);
             pm.free = initfreestate;
             cm.walkBounce = pm.free;
         }

@@ -168,7 +168,7 @@ public class PauseMenu : MonoBehaviour
                 switch (currentButton) {
                     case "MasterVolume":
                         if (dir.y > 0) {
-                            SelectSetting("PauseMenuSettingsTabAudioGeneral", false);
+                            //SelectSetting("PauseMenuSettingsTabAudioGeneral", false);
                         }else if (dir.y < 0) {
                             SelectSetting("PauseMenuSettingsTabAudioGeneral", false);
                             SelectSetting("PauseMenuSettingsTabAudioMusic", true);

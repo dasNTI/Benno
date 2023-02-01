@@ -12,7 +12,7 @@ public class UIScaling : MonoBehaviour
     private float initialaspectratio;
     private RectTransform rt;
 
-    private void Start()
+    private void Awake()
     {
         rt = GetComponent<RectTransform>();
         initialheight = rt.sizeDelta.y;
@@ -21,10 +21,10 @@ public class UIScaling : MonoBehaviour
     }
     void Update()
     {
-        float height = Screen.height / units * initialheight;
-        if (!fitaspect) return;
+        float height = Screen.height / 759f * initialheight;
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, height);
 
-        rt.sizeDelta = new Vector2(1, height);
+        if (!fitaspect) return;
         rt.sizeDelta = new Vector2(rt.sizeDelta.y * initialaspectratio, rt.sizeDelta.y);
     }
 }

@@ -6,6 +6,7 @@ public class SceneTrigger : MonoBehaviour
 {
     public bool active = true;
     public string EnterScene;
+    public int transition = 0;
 
     private bool entering;
 
@@ -19,6 +20,7 @@ public class SceneTrigger : MonoBehaviour
         if (!active) return;
         if (entering) return;
 
+        GameObject.Find("Transition").GetComponent<CameraTransition>().Transition = transition;
         GameObject.Find("Transition").GetComponent<CameraTransition>().CloseTransition(EnterScene);
         entering = true;
     }

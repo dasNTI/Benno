@@ -359,3 +359,6 @@ MonoBehaviour:
   - {fileID: -6804060423849485420, guid: 2c46c552d17cb7a41865b601f95df89e, type: 3}
   - {fileID: 1623886069161536271, guid: 2c46c552d17cb7a41865b601f95df89e, type: 3}
   - {fileID: 4076460503682321448, guid: 2c46c552d17cb7a41865b601f95df89e, type: 3}
+  NpcMode: 0
+  NpcModeDir: 2
+  active: 1
