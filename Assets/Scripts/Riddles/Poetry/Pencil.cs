@@ -8,7 +8,9 @@ public class Pencil : MonoBehaviour
     public RawImage Paper;
     public Color Tint;
     public Image Background;
+    public Texture2D Mask;
     public float ReducedSpeed;
+    public Vector2[,] MaskLimits;
 
     private InputMaster Master;
     private RectTransform rt;
@@ -46,14 +48,14 @@ public class Pencil : MonoBehaviour
             if (!active) uipm.Speed = OriginalSpeed;
         };
         Master.MainInput.Enter.performed += _ => {
-            Setup();
+            SetupArray();
         };
         Master.Enable();
 
-        Setup();
+        SetupArray();
     }
 
-    private void Setup() {
+    private void SetupArray() {
         Drawing = new Texture2D(Background.sprite.texture.width, Background.sprite.texture.height);
         Pixels = new Color[Background.sprite.texture.width, Background.sprite.texture.height];
 
