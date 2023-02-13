@@ -56,12 +56,13 @@ public class PlayerMovement : MonoBehaviour
         float v = Master.MainInput.Dir.ReadValue<Vector2>().y;
         float heightCheckLengthFactor = 1.55f;
         float widthCheckLengthFactor = 1.7f;
+        float squareRootFactor = 1 - Mathf.Sqrt(0.5f);
 
         if (h != 0 && CheckDir(Vector2.right * h, bc.bounds.extents.y * heightCheckLengthFactor))
-            transform.position += Vector3.right * (h + Mathf.Sign(h) * Mathf.Abs(v) * (1 - Mathf.Sqrt(0.5f))) * walkSpeed;
+            transform.position += Vector3.right * (h + Mathf.Sign(h) * Mathf.Abs(v) * squareRootFactor) * walkSpeed;
 
         if (v != 0 && CheckDir(Vector2.up * v, bc.bounds.extents.x * widthCheckLengthFactor)) 
-            transform.position += Vector3.up * (v + Mathf.Sign(v) * Mathf.Abs(h) * (1 - Mathf.Sqrt(0.5f))) * walkSpeed; 
+            transform.position += Vector3.up * (v + Mathf.Sign(v) * Mathf.Abs(h) * squareRootFactor) * walkSpeed; 
 
         if (new Vector2(h, v) != Vector2.zero)
         {
