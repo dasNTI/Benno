@@ -296,19 +296,21 @@ public class PlayerMovement : MonoBehaviour
                 };
                 break;
             case "MusicHall":
-                positionsPlusRotations = new Vector2[4]
+                positionsPlusRotations = new Vector2[5]
                 {
                     new Vector2(-93.96f, 52.19f),
                     new Vector2(-84.99f, 40.53f),
                     new Vector2(-80.01f, 55.45f),
-                    new Vector2(-89.5f, 42.4f)
+                    new Vector2(-89.5f, 42.4f),
+                    new Vector2(-84.1f, 42.49f)
                 };
-                possiblePrevScenes = new string[4]
+                possiblePrevScenes = new string[5]
                 {
                     "Music",
                     "30er",
                     "MusicGeographyHallway",
-                    "OldClassroom"
+                    "OldClassroom",
+                    "ChessCourtyard"
                 };
                 break;
             case "ScienceHallway":
