@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\UI\UIPlayerMovement.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\SceneTrigger.cs" />
+     <Compile Include="Assets\Scripts\CutsceneSystem.cs" />
      <Compile Include="Assets\Scripts\Riddles\Poetry\Pencil.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\CameraBlackBars.cs" />
@@ -73,6 +74,7 @@
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Packages\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Animations\Cutscenes\GymDisplay.txt" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

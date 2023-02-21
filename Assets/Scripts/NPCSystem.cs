@@ -9,6 +9,7 @@ public class NPCSystem : MonoBehaviour
     public float maxWalkingSpeed = 1.5f;
     public Texture2D[] sheets;
     public LayerMask peopleLM;
+    public bool roaming = true;
 
 
     void Start()
@@ -61,5 +62,6 @@ public class NPCSystem : MonoBehaviour
 
         npcm.spriteMap = sheets[Random.Range(0, sheets.Length)];
         npcm.walkingSpeed = maxWalkingSpeed + Random.Range(0, 0.2f);
+        npcm.roaming = roaming;
     }
 }

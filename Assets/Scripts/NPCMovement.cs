@@ -7,6 +7,7 @@ public class NPCMovement : MonoBehaviour
 {
     public Texture2D spriteMap;
     public float walkingSpeed = 1.4f;
+    public bool roaming = false;
 
     private Sprite[] sprites;
     private Seeker seeker;
@@ -25,7 +26,7 @@ public class NPCMovement : MonoBehaviour
         seeker = GetComponent<Seeker>();
         sr = GetComponent<SpriteRenderer>();
 
-        parseSpriteMap();
+        ParseSpriteMap();
 
         sr.sprite = sprites[0];
         pos = transform.position;
@@ -45,11 +46,11 @@ public class NPCMovement : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
 
-        if (path == null || currentWayPoint >= path.vectorPath.Count) return;
+        if (path == null || currentWayPoint >= path.vectorPath.Count || !roaming) return;
 
 
         Vector2 dir = (Vector2) (path.vectorPath[currentWayPoint] - transform.position);
-        dir = normalize(dir);
+        dir = Normalize(dir);
         transform.position += walkingSpeed * (Vector3) dir * Time.timeScale / 10f;
 
         int r(float z) {
@@ -66,13 +67,13 @@ public class NPCMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, (Vector2) path.vectorPath[currentWayPoint]) < nextWayPointDistance) currentWayPoint++;
     }
 
-    Vector2 normalize(Vector2 v) {
+    Vector2 Normalize(Vector2 v) {
         float factor = 1 / v.magnitude;
 
         return new Vector2(v.x * factor, v.y * factor);
     }
 
-    void parseSpriteMap() {
+    void ParseSpriteMap() {
         int width = 12;
         int height = 36;
 
@@ -125,4 +126,18 @@ public class NPCMovement : MonoBehaviour
         }
     }
 
+    public void WalkTo(Vector2 position, float duration) {
+        int StepsPerSecond = Application.targetFrameRate;
+
+        IEnumerator d() {
+            Vector2 init = transform.position;
+
+            float step = 1f / (duration * StepsPerSecond);
+            for (float i = 0; i < duration * StepsPerSecond; i++) {
+                transform.position = Vector2.Lerp(init, position, i / step);
+                yield return new WaitForSeconds(1f / StepsPerSecond);
+            }
+        };
+        StartCoroutine(d());
+    }
 }

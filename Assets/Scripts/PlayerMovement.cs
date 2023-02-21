@@ -54,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
         float h = Master.MainInput.Dir.ReadValue<Vector2>().x;
         float v = Master.MainInput.Dir.ReadValue<Vector2>().y;
-        float heightCheckLengthFactor = 1.55f;
-        float widthCheckLengthFactor = 1.7f;
+        const float heightCheckLengthFactor = 1.55f;
+        const float widthCheckLengthFactor = 1.7f;
         float squareRootFactor = 1 - Mathf.Sqrt(0.5f);
 
         if (h != 0 && CheckDir(Vector2.right * h, bc.bounds.extents.y * heightCheckLengthFactor))

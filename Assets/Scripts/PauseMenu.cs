@@ -9,9 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     private PlayerMovement Player;
     private bool initialPlayerFree;
-    private GameObject MainTab;
-    private GameObject SettingsTab;
-    private GameObject ConfirmTab;
+    private GameObject MainTab, SettingsTab, ControlsTab, ConfirmTab;
 
     public bool available = true;
     private bool active = false;
@@ -27,6 +25,8 @@ public class PauseMenu : MonoBehaviour
         MainTab.SetActive(false);
         SettingsTab = GameObject.Find("PauseMenuSettingsTab");
         SettingsTab.SetActive(false);
+        ControlsTab = GameObject.Find("PauseMenuControlsTab");
+        ControlsTab.SetActive(false);
         ConfirmTab = GameObject.Find("PauseMenuConfirmLeaveTab");
         ConfirmTab.SetActive(false);
         Player = GameObject.Find("Player").GetComponent<PlayerMovement>();
@@ -81,6 +81,13 @@ public class PauseMenu : MonoBehaviour
             case "Settings":
                 MainTab.SetActive(true);
                 SettingsTab.SetActive(false);
+                currentButton = "Settings";
+                currentTab = "Main";
+            break;
+
+            case "Controls":
+                MainTab.SetActive(true);
+                ControlsTab.SetActive(false);
                 currentButton = "Settings";
                 currentTab = "Main";
             break;
@@ -224,7 +231,9 @@ public class PauseMenu : MonoBehaviour
                             .GetComponent<Image>().color = new Color(255, 255, 255, 0.1f);
                     break;
                     case "Controls":
-
+                        ControlsTab.SetActive(true);
+                        MainTab.SetActive(false);
+                        currentTab = "Controls";
                     break;
                     case "MainMenu":
 
