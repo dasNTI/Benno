@@ -86,7 +86,7 @@ public class EyeCover : MonoBehaviour
 
     IEnumerator cycle() {
         while (enabled) {
-            yield return new WaitForSeconds(Random.Range(10, 90) / 10f);
+            yield return new WaitForSeconds(Random.Range(40, 150) / 10f);
             for (int i = 0; i < 5; i++) {
                 EyeTransform.localScale = new Vector3(1, Mathf.Pow(Mathf.Sin(i * Mathf.PI / 4f), 2), 1);
                 if (active) yield return new WaitForSeconds(0.1f);
