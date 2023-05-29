@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Library.unity
     guid: ac3dce846ca0fbc4ebf17882da5f491c
   - enabled: 1
-    path: Assets/Scenes/RiddlePoetry.unity
+    path: Assets/Scenes/Riddles/RiddlePoetry.unity
     guid: ad219dc878bfc0242a3038c649d220a9
   - enabled: 1
     path: Assets/Scenes/Gym.unity
