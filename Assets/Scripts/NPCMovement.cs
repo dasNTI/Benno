@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
+using Unity.Mathematics;
 
 public class NPCMovement : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class NPCMovement : MonoBehaviour
     private Vector2 pos;
 
     private Path path;
+    private Vector2 randomOffset;
     private int currentWayPoint;
     private float nextWayPointDistance = .6f;
     void Start()
@@ -39,6 +42,11 @@ public class NPCMovement : MonoBehaviour
                 currentWayPoint = 0;
             }
         });
+        randomOffset = new Vector2(
+            UnityEngine.Random.Range(-1f, 1f),
+            UnityEngine.Random.Range(-1f, 1f)
+        );
+        // randomOffset = Vector2.up;
     }
 
     // Update is called once per frame
@@ -49,7 +57,7 @@ public class NPCMovement : MonoBehaviour
         if (path == null || currentWayPoint >= path.vectorPath.Count || !roaming) return;
 
 
-        Vector2 dir = (Vector2) (path.vectorPath[currentWayPoint] - transform.position);
+        Vector2 dir =  (Vector2) path.vectorPath[currentWayPoint] + randomOffset - (Vector2) transform.position;
         dir = Normalize(dir);
         transform.position += walkingSpeed * (Vector3) dir * Time.timeScale / 10f;
 
@@ -64,7 +72,13 @@ public class NPCMovement : MonoBehaviour
                 -r(dir.y)
             );
 
-        if (Vector2.Distance(transform.position, (Vector2) path.vectorPath[currentWayPoint]) < nextWayPointDistance) currentWayPoint++;
+        if (Vector2.Distance((Vector2) transform.position, (Vector2) path.vectorPath[currentWayPoint] + randomOffset) < nextWayPointDistance) {
+            currentWayPoint++;
+            randomOffset = new Vector2(
+                UnityEngine.Random.Range(-1f, 1f),
+                UnityEngine.Random.Range(-1f, 1f)
+            );
+        }
     }
 
     Vector2 Normalize(Vector2 v) {
@@ -88,7 +102,7 @@ public class NPCMovement : MonoBehaviour
     }
 
     IEnumerator walkAni() {
-        yield return new WaitForSecondsRealtime(Random.Range(0, 1f));
+        yield return new WaitForSecondsRealtime(UnityEngine.Random.Range(0, 1.5f));
 
         while (enabled) {
             Vector2 check = aniDir;
